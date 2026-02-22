@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import { LandingNavbar } from '@/components/landing/landing-navbar';
 import { HeroSection } from '@/components/landing/hero-section';
 import { SocialProofBar } from '@/components/landing/social-proof-bar';
-import { TestimonialsSection } from '@/components/landing/testimonials-section';
 import { BigStatementSection } from '@/components/landing/big-statement-section';
 import { FeaturesSection } from '@/components/landing/features-section';
 import { PricingSection } from '@/components/landing/pricing-section';
@@ -26,13 +25,13 @@ export const metadata: Metadata = {
     'restaurante',
     'comercio',
     'inventario',
-    'facturacion',
+    'facturación',
     'reportes de ventas',
   ],
   openGraph: {
     title: 'woppi - Punto de Venta + Tienda Online + Programa de Lealtad',
     description:
-      'El sistema todo-en-uno para tu negocio. Punto de venta, tienda online e importacion con IA.',
+      'El sistema todo-en-uno para tu negocio. Punto de venta, tienda online e importación con IA.',
     type: 'website',
   },
 };
@@ -44,9 +43,8 @@ export default function LandingPage() {
       <main>
         <HeroSection />
         <SocialProofBar />
-        <TestimonialsSection />
-        <BigStatementSection />
         <FeaturesSection />
+        <BigStatementSection />
         <PricingSection />
         <FeatureCardsSection />
         <CtaSection />

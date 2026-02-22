@@ -82,17 +82,17 @@ export function MobileMenu({ open, onOpenChange }: MobileMenuProps) {
             variant="outline"
             className="h-12 w-full rounded-full text-base"
           >
-            <Link href="/login" onClick={() => onOpenChange(false)}>
-              Iniciar Sesion
-            </Link>
+            <a href="https://app.woppi.me/login" onClick={() => onOpenChange(false)}>
+              Iniciar Sesión
+            </a>
           </Button>
           <Button
             asChild
             className="h-12 w-full rounded-full bg-secondary text-base font-semibold text-white hover:bg-secondary/90"
           >
-            <Link href="/login" onClick={() => onOpenChange(false)}>
-              Registrate
-            </Link>
+            <a href="https://app.woppi.me/register" onClick={() => onOpenChange(false)}>
+              Regístrate
+            </a>
           </Button>
         </div>
       </SheetContent>

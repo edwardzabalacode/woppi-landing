@@ -9,10 +9,10 @@ import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
 import { ImagePlaceholder } from '@/components/landing/image-placeholder';
 
 export const metadata: Metadata = {
-  title: 'Tienda Online con Pedidos por WhatsApp para Venezuela | woppi',
+  title: 'Tienda Online con Pedidos por WhatsApp | woppi',
   description:
     'Crea tu catálogo digital sincronizado con tu punto de venta. Tus clientes ven tus productos y piden directo por WhatsApp. Sin comisiones, sin apps, incluido en tu plan.',
-  keywords: ['tienda online Venezuela', 'catalogo digital', 'pedidos por WhatsApp', 'menu digital', 'tienda virtual Venezuela', 'woppi tienda'],
+  keywords: ['tienda online', 'catálogo digital', 'pedidos por WhatsApp', 'menú digital', 'tienda virtual', 'woppi tienda'],
   alternates: { canonical: 'https://woppi.app/tienda-online' },
   openGraph: {
     title: 'Tienda Online con Pedidos por WhatsApp | woppi',
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 };
 
-const WHATSAPP_URL = `https://wa.me/584123949884?text=${encodeURIComponent('Hola! Quiero probar woppi para mi negocio.')}`;
+const REGISTER_URL = 'https://app.woppi.me/register';
 
 export default function TiendaOnlinePage() {
   return (
@@ -57,9 +57,7 @@ export default function TiendaOnlinePage() {
             {/* CTAs */}
             <div className="mb-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={REGISTER_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
               >
                 Crear mi tienda gratis

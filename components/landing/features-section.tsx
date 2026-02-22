@@ -18,12 +18,12 @@ const FEATURES_VE = [
   {
     icon: Smartphone,
     title: 'Punto de Venta',
-    description: 'Interfaz rapida y tactil para cualquier dispositivo',
+    description: 'Interfaz rápida y táctil para cualquier dispositivo',
   },
   {
     icon: CreditCard,
     title: 'Doble Moneda',
-    description: 'USD y VES con tasa BCV automatica',
+    description: 'USD y VES con tasa BCV automática',
   },
   {
     icon: Globe,
@@ -38,12 +38,12 @@ const FEATURES_VE = [
   {
     icon: BarChart3,
     title: 'Reportes',
-    description: 'Analisis de ventas en tiempo real',
+    description: 'Análisis de ventas en tiempo real',
   },
   {
     icon: Zap,
-    title: 'Importacion IA',
-    description: 'Carga tu menu con una foto',
+    title: 'Importación IA',
+    description: 'Carga tu menú con una foto',
   },
 ];
 
@@ -51,12 +51,12 @@ const FEATURES_INTL = [
   {
     icon: Smartphone,
     title: 'Punto de Venta',
-    description: 'Interfaz rapida y tactil para cualquier dispositivo',
+    description: 'Interfaz rápida y táctil para cualquier dispositivo',
   },
   {
     icon: CreditCard,
-    title: 'Multiples Monedas',
-    description: 'Configura la moneda de tu pais facilmente',
+    title: 'Múltiples Monedas',
+    description: 'Configura la moneda de tu país fácilmente',
   },
   {
     icon: Globe,
@@ -71,12 +71,12 @@ const FEATURES_INTL = [
   {
     icon: BarChart3,
     title: 'Reportes',
-    description: 'Analisis de ventas en tiempo real',
+    description: 'Análisis de ventas en tiempo real',
   },
   {
     icon: Zap,
-    title: 'Importacion IA',
-    description: 'Carga tu menu con una foto',
+    title: 'Importación IA',
+    description: 'Carga tu menú con una foto',
   },
 ];
 

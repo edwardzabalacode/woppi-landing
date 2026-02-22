@@ -20,14 +20,14 @@ const FEATURES = [
     label: 'Punto de Venta',
     href: '/punto-de-venta',
     icon: ShoppingCart,
-    description: 'Doble moneda USD/VES, tasa BCV, reportes y multi-dispositivo',
+    description: 'Cobro rápido, reportes en tiempo real y multi-dispositivo',
     color: 'bg-primary/10 text-primary group-hover/item:bg-primary/15',
   },
   {
     label: 'Tienda Online',
     href: '/tienda-online',
     icon: Globe,
-    description: 'Catalogo digital sincronizado y pedidos por WhatsApp',
+    description: 'Catálogo digital sincronizado y pedidos por WhatsApp',
     color: 'bg-primary/10 text-primary group-hover/item:bg-primary/15',
   },
   {
@@ -175,7 +175,7 @@ export function LandingNavbar() {
           {/* Right: CTAs */}
           <div className="hidden items-center gap-2 lg:flex">
             <a
-              href="/login"
+              href="https://app.woppi.me/login"
               className={cn(
                 'px-4 py-2 text-base font-semibold transition-colors',
                 scrolled
@@ -183,13 +183,13 @@ export function LandingNavbar() {
                   : 'text-white hover:text-white/80'
               )}
             >
-              Iniciar Sesion
+              Iniciar Sesión
             </a>
             <a
-              href="/login"
+              href="https://app.woppi.me/register"
               className="rounded-full bg-secondary px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-secondary/90"
             >
-              Registrate
+              Regístrate
             </a>
           </div>
 

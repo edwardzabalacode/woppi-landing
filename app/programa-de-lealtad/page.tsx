@@ -9,19 +9,19 @@ import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
 import { ImagePlaceholder } from '@/components/landing/image-placeholder';
 
 export const metadata: Metadata = {
-  title: 'Programa de Lealtad Digital para Venezuela — Sellos y Puntos | woppi',
+  title: 'Programa de Lealtad Digital — Sellos y Puntos | woppi',
   description:
     'Fideliza a tus clientes con sellos digitales y puntos canjeables. Sin tarjetas físicas que se pierden. Tu cliente acumula desde su celular y vuelve por sus recompensas.',
-  keywords: ['programa de lealtad Venezuela', 'fidelizacion clientes', 'sellos digitales', 'puntos canjeables', 'tarjeta fidelidad digital', 'woppi lealtad'],
+  keywords: ['programa de lealtad', 'fidelización clientes', 'sellos digitales', 'puntos canjeables', 'tarjeta fidelidad digital', 'woppi lealtad'],
   alternates: { canonical: 'https://woppi.app/programa-de-lealtad' },
   openGraph: {
-    title: 'Programa de Lealtad Digital para Venezuela | woppi',
+    title: 'Programa de Lealtad Digital — Sellos y Puntos | woppi',
     description: 'Sellos digitales, puntos y recompensas. Sin tarjetas físicas. Tus clientes siempre vuelven.',
     type: 'website',
   },
 };
 
-const WHATSAPP_URL = `https://wa.me/584123949884?text=${encodeURIComponent('Hola! Quiero probar woppi para mi negocio.')}`;
+const REGISTER_URL = 'https://app.woppi.me/register';
 
 export default function ProgramaDeLealtadPage() {
   return (
@@ -57,9 +57,7 @@ export default function ProgramaDeLealtadPage() {
             {/* CTAs */}
             <div className="mb-12 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={REGISTER_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
               >
                 Activar mi programa gratis

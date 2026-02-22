@@ -26,15 +26,15 @@ export function BigStatementSection() {
 
           {/* Statement */}
           <h2 className="text-3xl font-bold text-foreground md:text-4xl">
-            Errores de Calculo.{' '}
+            Errores de Cálculo.{' '}
             <span className="text-muted-foreground">Siempre.</span>
           </h2>
 
           {/* Subtext */}
           <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
             {isVE
-              ? 'Con la tasa BCV automatica y conversion en tiempo real, olvida la calculadora y los errores al dar cambio.'
-              : 'Con conversion automatica y reportes en tiempo real, olvida las hojas de calculo y los errores manuales.'}
+              ? 'Con la tasa BCV automática y conversión en tiempo real, olvida la calculadora y los errores al dar cambio.'
+              : 'Con conversión automática y reportes en tiempo real, olvida las hojas de cálculo y los errores manuales.'}
           </p>
         </motion.div>
       </div>

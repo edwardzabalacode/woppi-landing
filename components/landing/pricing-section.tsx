@@ -4,25 +4,21 @@ import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const WHATSAPP_NUMBER = '584123949884';
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hola! Me interesa conocer mas sobre woppi para mi negocio. Quiero comenzar.'
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+const REGISTER_URL = 'https://app.woppi.me/register';
 
 const COMPARISON = [
   {
-    feature: 'Sistema POS "todo-en-uno" basico',
+    feature: 'Sistema POS "todo-en-uno" básico',
     price: '$50',
     included: true,
   },
   {
-    feature: 'Doble moneda USD/VES con tasa BCV',
+    feature: 'Multi-moneda con conversión automática',
     price: '$20',
     included: true,
   },
   {
-    feature: 'Gestion de inventario',
+    feature: 'Gestión de inventario',
     price: '$15',
     included: true,
   },
@@ -37,12 +33,12 @@ const COMPARISON = [
     included: true,
   },
   {
-    feature: 'Importacion de menu con IA',
+    feature: 'Importación de menú con IA',
     price: '$40',
     included: true,
   },
   {
-    feature: 'Reportes y exportacion Excel',
+    feature: 'Reportes y exportación Excel',
     price: '$15',
     included: true,
   },
@@ -92,7 +88,7 @@ export function PricingSection() {
           className="mb-12 text-center"
         >
           <h2 className="mb-3 text-3xl font-bold text-foreground md:text-4xl">
-            Una Solucion Simple{' '}
+            Una Solución Simple{' '}
             <span className="inline-block">⚙️</span>
           </h2>
           <p className="text-muted-foreground">
@@ -148,11 +144,11 @@ export function PricingSection() {
                     ${totalOthers}/mes
                   </span>
                   <span className="text-3xl font-bold text-white">
-                    Consultar
+                    Gratis
                   </span>
                 </div>
                 <p className="text-sm text-white/70">
-                  Unete a la familia woppi
+                  Comienza gratis hoy
                 </p>
               </div>
               <Button
@@ -160,7 +156,7 @@ export function PricingSection() {
                 size="lg"
                 className="h-12 gap-2 rounded-full bg-secondary px-8 text-base font-semibold text-white shadow-lg transition-all hover:bg-secondary/90 hover:scale-[1.02]"
               >
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <a href={REGISTER_URL}>
                   Comenzar
                   <ArrowRight className="size-4" />
                 </a>

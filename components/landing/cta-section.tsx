@@ -4,11 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const WHATSAPP_NUMBER = '584123949884';
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hola! Quiero saber mas sobre woppi para mi negocio.'
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+const REGISTER_URL = 'https://app.woppi.me/register';
 
 export function CtaSection() {
   return (
@@ -24,7 +20,7 @@ export function CtaSection() {
           Prueba woppi Gratis
         </h2>
         <p className="mb-8 text-lg text-muted-foreground">
-          Comienza hoy y descubre por que cientos de negocios en Venezuela
+          Comienza hoy y descubre por qué cientos de negocios
           ya gestionan sus ventas con woppi.
         </p>
         <Button
@@ -32,7 +28,7 @@ export function CtaSection() {
           size="lg"
           className="h-14 gap-2 rounded-full bg-primary px-10 text-lg font-semibold text-white shadow-lg transition-all hover:bg-primary/90 hover:scale-[1.02] hover:shadow-xl active:scale-[0.98]"
         >
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <a href={REGISTER_URL}>
             Comenzar
             <ArrowRight className="size-5" />
           </a>

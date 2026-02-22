@@ -14,9 +14,9 @@ import {
 const FEATURE_CARDS = [
   {
     icon: Smartphone,
-    title: 'Sin Instalacion',
+    title: 'Sin Instalación',
     description:
-      'woppi es la forma mas simple de empezar. Funciona en cualquier navegador, celular o tablet. Sin descargas.',
+      'woppi es la forma más simple de empezar. Funciona en cualquier navegador, celular o tablet. Sin descargas.',
     image: '/screenshots/pos.png',
     imagePosition: 'right' as const,
     bgColor: 'bg-gradient-to-br from-orange-50 to-amber-50',
@@ -25,7 +25,7 @@ const FEATURE_CARDS = [
   },
   {
     icon: Receipt,
-    title: 'Registra Ventas Facil',
+    title: 'Registra Ventas Fácil',
     description:
       'Punto de venta simplificado y sin complicaciones. Registra tus ventas en segundos con nuestra interfaz intuitiva.',
     image: '/screenshots/pos.png',

@@ -46,24 +46,20 @@ function AnimatedWord() {
   );
 }
 
-const WHATSAPP_NUMBER = '584123949884';
-const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hola! Quiero comenzar con woppi.'
-);
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
+const REGISTER_URL = 'https://app.woppi.me/register';
 
 const HERO_POINTS_VE = [
   {
     icon: ShoppingCart,
-    text: 'Punto de venta con doble moneda y tasa BCV automatica',
+    text: 'Punto de venta con doble moneda y tasa BCV automática',
   },
   {
     icon: Smartphone,
-    text: 'Usalo desde tu celular, tablet o computador',
+    text: 'Úsalo desde tu celular, tablet o computador',
   },
   {
     icon: BarChart3,
-    text: 'Conoce las estadisticas de tu negocio en tiempo real',
+    text: 'Conoce las estadísticas de tu negocio en tiempo real',
   },
 ];
 
@@ -74,11 +70,11 @@ const HERO_POINTS_INTL = [
   },
   {
     icon: Smartphone,
-    text: 'Usalo desde tu celular, tablet o computador',
+    text: 'Úsalo desde tu celular, tablet o computador',
   },
   {
     icon: BarChart3,
-    text: 'Reportes y estadisticas de tu negocio en tiempo real',
+    text: 'Reportes y estadísticas de tu negocio en tiempo real',
   },
 ];
 
@@ -87,7 +83,7 @@ export function HeroSection() {
   const HERO_POINTS = isVenezuela(country) ? HERO_POINTS_VE : HERO_POINTS_INTL;
   return (
     <>
-      <section className="relative min-h-screen overflow-x-clip" style={{ backgroundColor: 'hsl(263, 55%, 50%)' }}>
+      <section className="relative min-h-screen overflow-x-clip bg-primary">
         {/* Desktop layout */}
         <div className="mx-auto hidden h-full max-w-7xl items-center gap-12 px-8 pt-32 pb-16 md:flex lg:gap-16 xl:gap-20">
           {/* Left: Text content */}
@@ -105,7 +101,7 @@ export function HeroSection() {
 
             {/* Subtitle */}
             <p className="mb-8 max-w-md text-lg leading-relaxed text-white/70">
-              Gestiona tu negocio de la forma mas facil.{' '}
+              Gestiona tu negocio de la forma más fácil.{' '}
               <span className="font-medium text-white/90">De cero a woppi!</span>
             </p>
 
@@ -126,22 +122,18 @@ export function HeroSection() {
             {/* CTAs */}
             <div className="mb-10 flex items-center gap-3">
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={REGISTER_URL}
                 className="inline-flex h-12 items-center gap-2 rounded-full bg-secondary px-7 text-base font-semibold text-white shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl active:scale-[0.98]"
               >
                 Prueba ya
                 <ArrowRight className="size-4" />
               </a>
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={REGISTER_URL}
                 className="inline-flex h-12 items-center gap-2 rounded-full border-2 border-white/20 px-7 text-base font-semibold text-white transition-all hover:border-white/40 hover:bg-white/5 active:scale-[0.98]"
               >
                 <MessageCircle className="size-4" />
-                Contactanos
+                Contáctanos
               </a>
             </div>
 
@@ -175,7 +167,7 @@ export function HeroSection() {
             </h1>
 
             <p className="mb-6 max-w-sm text-base leading-relaxed text-white/70">
-              Gestiona tu negocio de la forma mas facil.{' '}
+              Gestiona tu negocio de la forma más fácil.{' '}
               <span className="font-medium text-white/90">De cero a woppi!</span>
             </p>
 
@@ -196,22 +188,18 @@ export function HeroSection() {
             {/* CTAs */}
             <div className="mb-8 flex flex-col gap-3 sm:flex-row">
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={REGISTER_URL}
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-secondary px-7 text-base font-semibold text-white shadow-lg transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
                 Prueba ya
                 <ArrowRight className="size-4" />
               </a>
               <a
-                href={WHATSAPP_URL}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={REGISTER_URL}
                 className="inline-flex h-12 items-center justify-center gap-2 rounded-full border-2 border-white/20 px-7 text-base font-semibold text-white transition-all hover:border-white/40 active:scale-[0.98]"
               >
                 <MessageCircle className="size-4" />
-                Contactanos
+                Contáctanos
               </a>
             </div>
 
@@ -231,7 +219,7 @@ export function HeroSection() {
       </section>
 
       {/* Diagonal separator */}
-      <div className="relative h-[120px]" style={{ backgroundColor: 'hsl(263, 55%, 50%)' }}>
+      <div className="relative h-[120px] bg-primary">
         <svg
           viewBox="0 0 1440 120"
           fill="none"

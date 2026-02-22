@@ -7,12 +7,12 @@ import { ChevronLeft, ChevronRight, ArrowUpRight } from 'lucide-react';
 const BUSINESS_TYPES = [
   { name: 'Cafes', gradient: 'from-amber-900/80 to-amber-700/60' },
   { name: 'Restaurantes', gradient: 'from-rose-900/80 to-rose-700/60' },
-  { name: 'Comida rapida', gradient: 'from-orange-900/80 to-orange-700/60' },
-  { name: 'Panaderias', gradient: 'from-yellow-900/80 to-yellow-700/60' },
-  { name: 'Licorerias', gradient: 'from-purple-900/80 to-purple-700/60' },
+  { name: 'Comida rápida', gradient: 'from-orange-900/80 to-orange-700/60' },
+  { name: 'Panaderías', gradient: 'from-yellow-900/80 to-yellow-700/60' },
+  { name: 'Licorerías', gradient: 'from-purple-900/80 to-purple-700/60' },
   { name: 'Minimarkets', gradient: 'from-emerald-900/80 to-emerald-700/60' },
-  { name: 'Peluquerias', gradient: 'from-pink-900/80 to-pink-700/60' },
-  { name: 'Ferreterias', gradient: 'from-slate-900/80 to-slate-700/60' },
+  { name: 'Peluquerías', gradient: 'from-pink-900/80 to-pink-700/60' },
+  { name: 'Ferreterías', gradient: 'from-slate-900/80 to-slate-700/60' },
 ];
 
 export function SocialProofBar() {
@@ -120,7 +120,7 @@ export function SocialProofBar() {
         {/* Scrollable container */}
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto px-6 pb-4 snap-x snap-mandatory md:gap-6 md:px-16 lg:px-24"
+          className="flex gap-4 overflow-x-auto overflow-y-hidden px-6 pb-4 snap-x snap-mandatory md:gap-6 md:px-16 lg:px-24"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <style jsx>{`

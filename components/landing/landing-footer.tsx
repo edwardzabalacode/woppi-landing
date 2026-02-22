@@ -44,7 +44,7 @@ export function LandingFooter() {
               />
             </Link>
             <p className="mb-6 max-w-xs text-sm leading-relaxed">
-              El sistema todo-en-uno para negocios en Venezuela. Punto de venta,
+              El sistema todo-en-uno para tu negocio. Punto de venta,
               tienda online y programa de lealtad.
             </p>
             {/* Social links */}
@@ -127,7 +127,7 @@ export function LandingFooter() {
             reservados.
           </p>
           <p className="text-sm">
-            Hecho con <span className="text-red-400">♥</span> en Venezuela
+            Hecho con <span className="text-red-400">♥</span> para tu negocio
           </p>
         </div>
       </div>
