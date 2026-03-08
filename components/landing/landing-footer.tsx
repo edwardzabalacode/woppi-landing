@@ -29,8 +29,22 @@ const SOCIAL_LINKS = [
 
 export function LandingFooter() {
   return (
-    <footer className="bg-[hsl(267,45%,8%)] px-4 py-16 text-white/70">
-      <div className="mx-auto max-w-6xl">
+    <footer
+      className="relative overflow-hidden px-4 py-16 text-white/70"
+      style={{
+        background: 'linear-gradient(180deg, hsl(263, 58%, 12%) 0%, hsl(263, 58%, 8%) 100%)'
+      }}
+    >
+      {/* Decorative orb */}
+      <div
+        className="absolute -right-[200px] top-0 h-[400px] w-[400px] rounded-full opacity-[0.05]"
+        style={{
+          background: 'hsl(39, 85%, 60%)',
+          filter: 'blur(100px)'
+        }}
+      />
+
+      <div className="relative mx-auto max-w-6xl">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
           {/* Brand */}
           <div className="col-span-2">
@@ -53,7 +67,7 @@ export function LandingFooter() {
                 <a
                   key={social.label}
                   href={social.href}
-                  className="flex size-10 items-center justify-center rounded-full bg-white/10 transition-colors hover:bg-white/20"
+                  className="flex size-10 items-center justify-center rounded-full border border-white/10 bg-white/5 transition-all duration-300 hover:border-secondary/50 hover:bg-secondary/20 hover:text-secondary"
                   aria-label={social.label}
                 >
                   <social.icon className="size-5" />
@@ -72,7 +86,7 @@ export function LandingFooter() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-sm transition-colors hover:text-secondary"
                   >
                     {link.label}
                   </a>
@@ -91,7 +105,7 @@ export function LandingFooter() {
                 <li key={link.label}>
                   <Link
                     href={link.href}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-sm transition-colors hover:text-secondary"
                   >
                     {link.label}
                   </Link>
@@ -110,7 +124,7 @@ export function LandingFooter() {
                 <li key={link.label}>
                   <a
                     href={link.href}
-                    className="text-sm transition-colors hover:text-white"
+                    className="text-sm transition-colors hover:text-secondary"
                   >
                     {link.label}
                   </a>
@@ -127,7 +141,7 @@ export function LandingFooter() {
             reservados.
           </p>
           <p className="text-sm">
-            Hecho con <span className="text-red-400">♥</span> para tu negocio
+            Hecho con <span className="text-secondary">♥</span> para tu negocio
           </p>
         </div>
       </div>

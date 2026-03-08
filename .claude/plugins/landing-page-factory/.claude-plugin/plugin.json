@@ -1,0 +1,9 @@
+{
+  "name": "landing-page-factory",
+  "version": "0.1.0",
+  "description": "Automated landing page creation pipeline: from job description to deployed React landing page with AI-generated hero images (Nano Banana) and animated videos (Veo 3.1)",
+  "author": {
+    "name": "Edward Zabala"
+  },
+  "keywords": ["landing-page", "nano-banana", "veo", "gemini", "react", "image-generation", "video-generation"]
+}

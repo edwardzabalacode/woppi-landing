@@ -107,7 +107,7 @@ function FaqAccordionItem({ item, index }: { item: FaqItem; index: number }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.05 }}
-      className="border-b border-gray-200 last:border-0"
+      className="border-b border-primary/10 last:border-0"
     >
       <button
         onClick={() => setOpen(!open)}
@@ -118,8 +118,10 @@ function FaqAccordionItem({ item, index }: { item: FaqItem; index: number }) {
         </span>
         <div
           className={cn(
-            'flex size-8 shrink-0 items-center justify-center rounded-full transition-colors',
-            open ? 'bg-primary text-white' : 'bg-gray-100 text-gray-600'
+            'flex size-8 shrink-0 items-center justify-center rounded-full transition-all duration-300',
+            open
+              ? 'bg-secondary text-white shadow-[0_4px_15px_hsl(39,85%,60%,0.3)]'
+              : 'bg-primary/10 text-primary'
           )}
         >
           {open ? <Minus className="size-4" /> : <Plus className="size-4" />}
@@ -142,8 +144,24 @@ export function FaqSection() {
   const FAQS = isVenezuela(country) ? FAQS_VE : FAQS_INTL;
 
   return (
-    <section id="faq" className="scroll-mt-20 bg-gray-50 px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-3xl">
+    <section id="faq" className="relative scroll-mt-20 overflow-hidden bg-gray-50 px-4 py-16 md:py-24">
+      {/* Subtle decorative elements */}
+      <div
+        className="absolute -left-[150px] top-[20%] h-[300px] w-[300px] rounded-full opacity-[0.04]"
+        style={{
+          background: 'hsl(263, 58%, 33%)',
+          filter: 'blur(80px)'
+        }}
+      />
+      <div
+        className="absolute -right-[100px] bottom-[20%] h-[250px] w-[250px] rounded-full opacity-[0.03]"
+        style={{
+          background: 'hsl(39, 85%, 60%)',
+          filter: 'blur(80px)'
+        }}
+      />
+
+      <div className="relative mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -159,7 +177,12 @@ export function FaqSection() {
           </p>
         </motion.div>
 
-        <div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
+        <div
+          className="rounded-2xl border border-primary/10 bg-white p-6 md:p-8"
+          style={{
+            boxShadow: '0 10px 40px hsl(263, 58%, 33%, 0.06)'
+          }}
+        >
           {FAQS.map((faq, i) => (
             <FaqAccordionItem key={faq.question} item={faq} index={i} />
           ))}

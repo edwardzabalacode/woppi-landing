@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { LandingNavbar } from '@/components/landing/landing-navbar';
 import { HeroSection } from '@/components/landing/hero-section';
-import { SocialProofBar } from '@/components/landing/social-proof-bar';
+import { BusinessTypesSection } from '@/components/landing/business-types-section';
 import { BigStatementSection } from '@/components/landing/big-statement-section';
 import { FeaturesSection } from '@/components/landing/features-section';
 import { PricingSection } from '@/components/landing/pricing-section';
@@ -42,7 +42,7 @@ export default function LandingPage() {
       <LandingNavbar />
       <main>
         <HeroSection />
-        <SocialProofBar />
+        <BusinessTypesSection />
         <FeaturesSection />
         <BigStatementSection />
         <PricingSection />

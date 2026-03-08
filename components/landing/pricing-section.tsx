@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 
 const REGISTER_URL = 'https://app.woppi.me/register';
 
@@ -77,8 +76,24 @@ export function PricingSection() {
   }, 0);
 
   return (
-    <section id="precios" className="scroll-mt-20 bg-gray-50 px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-3xl">
+    <section id="precios" className="relative scroll-mt-20 overflow-hidden bg-gray-50 px-4 py-16 md:py-24">
+      {/* Subtle decorative elements */}
+      <div
+        className="absolute -right-[200px] top-[20%] h-[400px] w-[400px] rounded-full opacity-[0.04]"
+        style={{
+          background: 'hsl(263, 58%, 33%)',
+          filter: 'blur(80px)'
+        }}
+      />
+      <div
+        className="absolute -left-[150px] bottom-[10%] h-[300px] w-[300px] rounded-full opacity-[0.03]"
+        style={{
+          background: 'hsl(39, 85%, 60%)',
+          filter: 'blur(80px)'
+        }}
+      />
+
+      <div className="relative mx-auto max-w-3xl">
         {/* Section header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -102,7 +117,10 @@ export function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ type: 'spring', stiffness: 80, damping: 20 }}
-          className="overflow-hidden rounded-2xl bg-white shadow-xl ring-1 ring-gray-100"
+          className="overflow-hidden rounded-2xl border border-primary/10 bg-white"
+          style={{
+            boxShadow: '0 20px 60px hsl(263, 58%, 33%, 0.1)'
+          }}
         >
           {/* Features list */}
           <div className="p-6 md:p-8">
@@ -120,7 +138,13 @@ export function PricingSection() {
                   className="flex items-center justify-between border-b border-gray-100 pb-3 last:border-0"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="flex size-6 items-center justify-center rounded-full bg-secondary/10">
+                    <div
+                      className="flex size-6 items-center justify-center rounded-full"
+                      style={{
+                        background: 'linear-gradient(135deg, hsl(39, 85%, 60%, 0.15) 0%, hsl(39, 85%, 50%, 0.1) 100%)',
+                        border: '1px solid hsl(39, 85%, 60%, 0.2)'
+                      }}
+                    >
                       <Check className="size-3.5 text-secondary" />
                     </div>
                     <span className="text-sm text-foreground md:text-base">
@@ -136,7 +160,12 @@ export function PricingSection() {
           </div>
 
           {/* Bottom CTA */}
-          <div className="border-t border-gray-100 bg-gradient-to-br from-primary to-[hsl(263,58%,40%)] p-6 md:p-8">
+          <div
+            className="border-t border-primary/10 p-6 md:p-8"
+            style={{
+              background: 'linear-gradient(135deg, hsl(263, 58%, 33%) 0%, hsl(262, 83%, 40%) 100%)'
+            }}
+          >
             <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
               <div>
                 <div className="flex items-baseline gap-2">
@@ -151,16 +180,17 @@ export function PricingSection() {
                   Comienza gratis hoy
                 </p>
               </div>
-              <Button
-                asChild
-                size="lg"
-                className="h-12 gap-2 rounded-full bg-secondary px-8 text-base font-semibold text-white shadow-lg transition-all hover:bg-secondary/90 hover:scale-[1.02]"
+              <a
+                href={REGISTER_URL}
+                className="group inline-flex h-12 items-center gap-2 rounded-full px-8 text-base font-semibold text-white transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                style={{
+                  background: 'linear-gradient(180deg, hsl(39, 85%, 65%) 0%, hsl(39, 85%, 55%) 100%)',
+                  boxShadow: '0 4px 20px hsl(39, 85%, 60%, 0.4)'
+                }}
               >
-                <a href={REGISTER_URL}>
-                  Comenzar
-                  <ArrowRight className="size-4" />
-                </a>
-              </Button>
+                Comenzar
+                <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
+              </a>
             </div>
           </div>
         </motion.div>

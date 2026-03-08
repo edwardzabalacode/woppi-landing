@@ -109,11 +109,35 @@ export function FeaturesSection() {
   return (
     <section
       id="funcionalidades"
-      className="relative overflow-hidden bg-primary px-4 py-16 md:py-24"
+      className="relative overflow-hidden px-4 py-16 md:py-24"
+      style={{
+        background: 'radial-gradient(ellipse 120% 80% at 50% 100%, hsl(262, 83%, 45%) 0%, hsl(263, 58%, 33%) 50%, hsl(263, 58%, 28%) 100%)'
+      }}
     >
-      {/* Background decoration */}
-      <div className="absolute top-0 right-0 h-64 w-64 rounded-full bg-secondary opacity-10 blur-[100px]" />
-      <div className="absolute bottom-0 left-0 h-80 w-80 rounded-full bg-[hsl(262,83%,58%)] opacity-10 blur-[100px]" />
+      {/* Background decorations - matching hero */}
+      <div
+        className="absolute -right-[100px] top-[20%] h-[500px] w-[500px] rounded-full opacity-15"
+        style={{
+          background: 'hsl(39, 85%, 60%)',
+          filter: 'blur(120px)'
+        }}
+      />
+      <div
+        className="absolute -left-[100px] bottom-[10%] h-[400px] w-[400px] rounded-full opacity-10"
+        style={{
+          background: 'hsl(262, 83%, 58%)',
+          filter: 'blur(100px)'
+        }}
+      />
+
+      {/* Subtle grid pattern */}
+      <div
+        className="absolute inset-0 opacity-[0.03]"
+        style={{
+          backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }}
+      />
 
       <div className="relative mx-auto max-w-6xl">
         {/* Section header */}
@@ -144,9 +168,15 @@ export function FeaturesSection() {
             className="relative flex items-center justify-center"
           >
             <div className="relative">
-              {/* Laptop mockup */}
-              <div className="relative rounded-xl bg-gray-900 p-2 shadow-2xl">
-                <div className="overflow-hidden rounded-lg">
+              {/* Laptop mockup - improved styling */}
+              <div
+                className="relative overflow-hidden rounded-2xl border border-white/10 p-2"
+                style={{
+                  background: 'linear-gradient(145deg, hsl(263, 58%, 20%) 0%, hsl(263, 58%, 15%) 100%)',
+                  boxShadow: '0 25px 80px rgba(0,0,0,0.4)'
+                }}
+              >
+                <div className="overflow-hidden rounded-xl">
                   <Image
                     src="/screenshots/dashboard.png"
                     alt="Dashboard"
@@ -168,7 +198,13 @@ export function FeaturesSection() {
                 }}
                 className="absolute -bottom-8 -right-8 w-40 md:w-56"
               >
-                <div className="overflow-hidden rounded-[1.5rem] border-4 border-white/20 bg-white shadow-xl">
+                <div
+                  className="overflow-hidden rounded-[1.5rem] border-2 border-white/20"
+                  style={{
+                    background: 'white',
+                    boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+                  }}
+                >
                   <Image
                     src="/screenshots/pos.png"
                     alt="POS Mobile"
@@ -193,9 +229,17 @@ export function FeaturesSection() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className="rounded-xl bg-white/10 p-4 backdrop-blur-sm transition-colors hover:bg-white/15"
+                className="group rounded-xl border border-white/10 p-4 backdrop-blur-sm transition-all duration-300 hover:border-white/20"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.08)'
+                }}
               >
-                <div className="mb-3 flex size-10 items-center justify-center rounded-lg bg-secondary/20">
+                <div
+                  className="mb-3 flex size-10 items-center justify-center rounded-lg border border-white/10 transition-all duration-300 group-hover:border-secondary/30"
+                  style={{
+                    background: 'rgba(233, 160, 51, 0.15)'
+                  }}
+                >
                   <feature.icon className="size-5 text-secondary" />
                 </div>
                 <h3 className="mb-1 font-semibold text-white">{feature.title}</h3>

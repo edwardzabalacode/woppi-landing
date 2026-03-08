@@ -19,9 +19,8 @@ const FEATURE_CARDS = [
       'woppi es la forma más simple de empezar. Funciona en cualquier navegador, celular o tablet. Sin descargas.',
     image: '/screenshots/pos.png',
     imagePosition: 'right' as const,
-    bgColor: 'bg-gradient-to-br from-orange-50 to-amber-50',
-    iconBg: 'bg-orange-100',
-    iconColor: 'text-orange-600',
+    gradient: 'linear-gradient(135deg, hsl(39, 85%, 97%) 0%, hsl(39, 85%, 93%) 100%)',
+    borderColor: 'hsl(39, 85%, 60%, 0.2)',
   },
   {
     icon: Receipt,
@@ -30,9 +29,8 @@ const FEATURE_CARDS = [
       'Punto de venta simplificado y sin complicaciones. Registra tus ventas en segundos con nuestra interfaz intuitiva.',
     image: '/screenshots/pos.png',
     imagePosition: 'left' as const,
-    bgColor: 'bg-gradient-to-br from-purple-50 to-indigo-50',
-    iconBg: 'bg-purple-100',
-    iconColor: 'text-purple-600',
+    gradient: 'linear-gradient(135deg, hsl(263, 58%, 97%) 0%, hsl(263, 58%, 93%) 100%)',
+    borderColor: 'hsl(263, 58%, 33%, 0.15)',
   },
   {
     icon: MessageCircle,
@@ -41,14 +39,13 @@ const FEATURE_CARDS = [
       'Recibe tus pedidos directos al WhatsApp. Tus clientes piden desde tu tienda online y tu gestionas todo desde un solo lugar.',
     logos: [
       { icon: MessageCircle, color: 'text-green-500' },
-      { icon: Banknote, color: 'text-blue-500' },
-      { icon: Sparkles, color: 'text-purple-500' },
-      { icon: Users, color: 'text-orange-500' },
+      { icon: Banknote, color: 'text-primary' },
+      { icon: Sparkles, color: 'text-secondary' },
+      { icon: Users, color: 'text-primary' },
     ],
     imagePosition: 'icons' as const,
-    bgColor: 'bg-gradient-to-br from-green-50 to-emerald-50',
-    iconBg: 'bg-green-100',
-    iconColor: 'text-green-600',
+    gradient: 'linear-gradient(135deg, hsl(262, 83%, 97%) 0%, hsl(39, 85%, 97%) 100%)',
+    borderColor: 'hsl(262, 83%, 58%, 0.15)',
   },
 ];
 
@@ -76,8 +73,17 @@ const cardVariants = {
 
 export function FeatureCardsSection() {
   return (
-    <section className="bg-white px-4 py-16 md:py-24">
-      <div className="mx-auto max-w-5xl">
+    <section className="relative overflow-hidden bg-white px-4 py-16 md:py-24">
+      {/* Subtle background decoration */}
+      <div
+        className="absolute right-0 top-[30%] h-[500px] w-[500px] rounded-full opacity-[0.03]"
+        style={{
+          background: 'hsl(263, 58%, 33%)',
+          filter: 'blur(100px)'
+        }}
+      />
+
+      <div className="relative mx-auto max-w-5xl">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -89,7 +95,12 @@ export function FeatureCardsSection() {
             <motion.div
               key={card.title}
               variants={cardVariants}
-              className={`overflow-hidden rounded-3xl ${card.bgColor} p-6 md:p-10`}
+              className="overflow-hidden rounded-3xl p-6 md:p-10"
+              style={{
+                background: card.gradient,
+                border: `1px solid ${card.borderColor}`,
+                boxShadow: '0 10px 40px hsl(263, 58%, 33%, 0.06)'
+              }}
             >
               <div
                 className={`grid grid-cols-1 items-center gap-8 md:grid-cols-2 ${
@@ -103,9 +114,13 @@ export function FeatureCardsSection() {
                   }`}
                 >
                   <div
-                    className={`mb-4 inline-flex size-12 items-center justify-center rounded-xl ${card.iconBg}`}
+                    className="mb-4 inline-flex size-12 items-center justify-center rounded-xl border border-white/50"
+                    style={{
+                      background: 'rgba(255, 255, 255, 0.8)',
+                      boxShadow: '0 4px 15px hsl(263, 58%, 33%, 0.08)'
+                    }}
                   >
-                    <card.icon className={`size-6 ${card.iconColor}`} />
+                    <card.icon className="size-6 text-primary" />
                   </div>
                   <h3 className="mb-3 text-2xl font-bold text-foreground md:text-3xl">
                     {card.title}
@@ -135,7 +150,10 @@ export function FeatureCardsSection() {
                             damping: 15,
                             delay: 0.1 * i,
                           }}
-                          className="flex size-16 items-center justify-center rounded-2xl bg-white shadow-lg md:size-20"
+                          className="flex size-16 items-center justify-center rounded-2xl border border-white/50 bg-white md:size-20"
+                          style={{
+                            boxShadow: '0 8px 30px hsl(263, 58%, 33%, 0.1)'
+                          }}
                         >
                           <logo.icon className={`size-8 ${logo.color}`} />
                         </motion.div>
@@ -152,7 +170,12 @@ export function FeatureCardsSection() {
                       }}
                       className="flex justify-center"
                     >
-                      <div className="w-48 overflow-hidden rounded-[2rem] border-4 border-white bg-white shadow-2xl md:w-56">
+                      <div
+                        className="w-48 overflow-hidden rounded-[2rem] border-2 border-white/80 bg-white md:w-56"
+                        style={{
+                          boxShadow: '0 20px 60px hsl(263, 58%, 33%, 0.15)'
+                        }}
+                      >
                         <Image
                           src={card.image!}
                           alt={card.title}
