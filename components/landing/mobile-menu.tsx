@@ -12,9 +12,9 @@ import {
 import { Button } from '@/components/ui/button';
 
 const FEATURES = [
-  { label: 'Punto de Venta', href: '/punto-de-venta', icon: ShoppingCart },
-  { label: 'Tienda Online', href: '/tienda-online', icon: Globe },
-  { label: 'Programa de Lealtad', href: '/programa-de-lealtad', icon: Heart },
+  { label: 'Punto de Venta', href: '/point-of-sale', icon: ShoppingCart },
+  { label: 'Tienda Online', href: '/online-store', icon: Globe },
+  { label: 'Programa de Lealtad', href: '/loyalty-program', icon: Heart },
 ];
 
 interface MobileMenuProps {

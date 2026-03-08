@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     'Sistema de punto de venta completo. Cobra en segundos, cierra la caja sin errores. Funciona en tu celular sin instalar nada.',
   keywords: ['punto de venta', 'POS', 'sistema de ventas', 'cobro rápido', 'woppi POS'],
-  alternates: { canonical: 'https://woppi.app/punto-de-venta' },
+  alternates: { canonical: 'https://woppi.app/point-of-sale' },
   openGraph: {
     title: 'Punto de Venta para tu Negocio | woppi',
     description: 'Cobro en segundos, reportes en tiempo real. Desde tu celular.',

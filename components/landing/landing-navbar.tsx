@@ -18,21 +18,21 @@ import { MobileMenu } from './mobile-menu';
 const FEATURES = [
   {
     label: 'Punto de Venta',
-    href: '/punto-de-venta',
+    href: '/point-of-sale',
     icon: ShoppingCart,
     description: 'Cobro rápido, reportes en tiempo real y multi-dispositivo',
     color: 'bg-primary/10 text-primary group-hover/item:bg-primary/15',
   },
   {
     label: 'Tienda Online',
-    href: '/tienda-online',
+    href: '/online-store',
     icon: Globe,
     description: 'Catálogo digital sincronizado y pedidos por WhatsApp',
     color: 'bg-primary/10 text-primary group-hover/item:bg-primary/15',
   },
   {
     label: 'Programa de Lealtad',
-    href: '/programa-de-lealtad',
+    href: '/loyalty-program',
     icon: Heart,
     description: 'Sellos digitales, puntos canjeables y recompensas',
     color: 'bg-primary/10 text-primary group-hover/item:bg-primary/15',
