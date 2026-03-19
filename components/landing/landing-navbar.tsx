@@ -60,7 +60,7 @@ function NavDropdown({
     <div className="group relative">
       <button
         className={cn(
-          'flex items-center gap-1.5 text-[17px] font-semibold transition-colors',
+          'flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300',
           scrolled
             ? 'text-foreground/70 hover:text-foreground'
             : 'text-white hover:text-white/80'
@@ -113,99 +113,152 @@ export function LandingNavbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setScrolled(window.scrollY > 80);
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <>
-      <header
-        className={cn(
-          'fixed top-0 right-0 left-0 z-50 transition-all duration-300',
-          scrolled
-            ? 'border-b border-border/50 bg-background/95 shadow-sm backdrop-blur-lg'
-            : 'bg-transparent'
-        )}
-      >
-        <nav className="flex items-center justify-between px-6 py-4 md:px-10">
-          {/* Left: Logo + Nav links */}
-          <div className="flex items-center">
-            <Link href="/" className="flex items-center">
-              <Image
-                src={scrolled ? '/logo.png' : '/logo-white.png'}
-                alt="woppi"
-                width={120}
-                height={34}
-                className="h-9 w-auto"
-                priority
-              />
-            </Link>
-
-            {/* Desktop nav links */}
-            <div className="ml-12 hidden items-center gap-10 lg:flex">
-              <Link
-                href="/"
-                className={cn(
-                  'text-[17px] font-semibold transition-colors',
-                  scrolled
-                    ? 'text-foreground/70 hover:text-foreground'
-                    : 'text-white hover:text-white/80'
-                )}
-              >
-                Inicio
-              </Link>
-
-              <NavDropdown label="Funcionalidades" items={FEATURES} scrolled={scrolled} />
-
-              <Link
-                href="/pricing"
-                className={cn(
-                  'text-[17px] font-semibold transition-colors',
-                  scrolled
-                    ? 'text-foreground/70 hover:text-foreground'
-                    : 'text-white hover:text-white/80'
-                )}
-              >
-                Precios
-              </Link>
-            </div>
-          </div>
-
-          {/* Right: CTAs */}
-          <div className="hidden items-center gap-2 lg:flex">
-            <a
-              href="https://app.woppi.me/login"
-              className={cn(
-                'px-4 py-2 text-base font-semibold transition-colors',
-                scrolled
-                  ? 'text-foreground/70 hover:text-foreground'
-                  : 'text-white hover:text-white/80'
-              )}
-            >
-              Iniciar Sesión
-            </a>
-            <a
-              href="https://app.woppi.me/register"
-              className="rounded-full bg-secondary px-5 py-2.5 text-base font-semibold text-white transition-colors hover:bg-secondary/90"
-            >
-              Regístrate
-            </a>
-          </div>
-
-          {/* Mobile hamburger */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className={cn(
-              'lg:hidden',
-              scrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10'
-            )}
-            onClick={() => setMobileOpen(true)}
+      <header className="fixed top-0 right-0 left-0 z-50">
+        {/* Pill container that appears on scroll */}
+        <div
+          className={cn(
+            'mx-auto transition-all duration-500 ease-out',
+            scrolled
+              ? 'mt-4 max-w-4xl px-4'
+              : 'mt-0 max-w-full px-0'
+          )}
+        >
+          <nav
+            className="relative flex items-center justify-between transition-all duration-500 ease-out"
+            style={{
+              borderRadius: '9999px',
+              padding: scrolled ? '10px 24px' : '16px 24px',
+              background: scrolled ? 'rgba(255, 255, 255, 0.85)' : 'transparent',
+              backdropFilter: scrolled ? 'blur(20px)' : 'blur(0px)',
+              WebkitBackdropFilter: scrolled ? 'blur(20px)' : 'blur(0px)',
+              boxShadow: scrolled
+                ? '0 8px 32px rgba(85, 52, 133, 0.12)'
+                : '0 0 0 transparent'
+            }}
           >
-            <Menu className="size-5" />
-          </Button>
-        </nav>
+            {/* Border overlay for smooth transition */}
+            <div
+              className="pointer-events-none absolute inset-0 rounded-full transition-opacity duration-500"
+              style={{
+                border: '1px solid rgba(85, 52, 133, 0.1)',
+                opacity: scrolled ? 1 : 0
+              }}
+            />
+            {/* Left: Logo + Nav links */}
+            <div className="flex items-center">
+              <Link href="/" className="flex items-center">
+                <div className={cn(
+                  'relative transition-all duration-500',
+                  scrolled ? 'h-7 w-[80px]' : 'h-9 w-[100px]'
+                )}>
+                  {/* White logo */}
+                  <Image
+                    src="/logo-white.png"
+                    alt="woppi"
+                    fill
+                    className={cn(
+                      'object-contain object-left transition-opacity duration-500',
+                      scrolled ? 'opacity-0' : 'opacity-100'
+                    )}
+                    priority
+                  />
+                  {/* Color logo */}
+                  <Image
+                    src="/logo.png"
+                    alt="woppi"
+                    fill
+                    className={cn(
+                      'object-contain object-left transition-opacity duration-500',
+                      scrolled ? 'opacity-100' : 'opacity-0'
+                    )}
+                    priority
+                  />
+                </div>
+              </Link>
+
+              {/* Desktop nav links */}
+              <div className={cn(
+                'hidden items-center lg:flex transition-all duration-500',
+                scrolled ? 'ml-8 gap-6' : 'ml-12 gap-10'
+              )}>
+                <Link
+                  href="/"
+                  className={cn(
+                    'font-semibold transition-colors duration-300',
+                    scrolled
+                      ? 'text-sm text-foreground/70 hover:text-foreground'
+                      : 'text-[17px] text-white hover:text-white/80'
+                  )}
+                >
+                  Inicio
+                </Link>
+
+                <NavDropdown label="Funcionalidades" items={FEATURES} scrolled={scrolled} />
+
+                <Link
+                  href="/pricing"
+                  className={cn(
+                    'font-semibold transition-colors duration-300',
+                    scrolled
+                      ? 'text-sm text-foreground/70 hover:text-foreground'
+                      : 'text-[17px] text-white hover:text-white/80'
+                  )}
+                >
+                  Precios
+                </Link>
+              </div>
+            </div>
+
+            {/* Right: CTAs */}
+            <div className="hidden items-center gap-2 lg:flex">
+              <a
+                href="https://app.woppi.me/login"
+                className={cn(
+                  'font-semibold transition-all duration-300',
+                  scrolled
+                    ? 'px-3 py-1.5 text-sm text-foreground/70 hover:text-foreground'
+                    : 'px-4 py-2 text-base text-white hover:text-white/80'
+                )}
+              >
+                Iniciar Sesión
+              </a>
+              <a
+                href="https://app.woppi.me/register"
+                className={cn(
+                  'rounded-full bg-secondary font-semibold text-white transition-all duration-300 hover:bg-secondary/90',
+                  scrolled
+                    ? 'px-4 py-1.5 text-sm'
+                    : 'px-5 py-2.5 text-base'
+                )}
+                style={{
+                  boxShadow: '0 4px 15px hsl(39, 85%, 60%, 0.3)'
+                }}
+              >
+                Regístrate
+              </a>
+            </div>
+
+            {/* Mobile hamburger */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className={cn(
+                'lg:hidden transition-colors duration-300',
+                scrolled ? 'text-foreground hover:bg-muted' : 'text-white hover:bg-white/10'
+              )}
+              onClick={() => setMobileOpen(true)}
+            >
+              <Menu className="size-5" />
+            </Button>
+          </nav>
+        </div>
       </header>
 
       <MobileMenu open={mobileOpen} onOpenChange={setMobileOpen} />

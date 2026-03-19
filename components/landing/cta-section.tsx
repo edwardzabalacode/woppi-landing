@@ -35,15 +35,17 @@ export function CtaSection() {
           }}
         >
           <Sparkles className="size-4 text-secondary" />
-          <span className="text-sm font-medium text-primary">100% Gratis para empezar</span>
+          <span className="text-sm font-medium text-primary">Registro en menos de 2 minutos</span>
         </motion.div>
 
         <h2 className="mb-6 text-3xl font-bold text-foreground md:text-4xl lg:text-5xl">
           Prueba woppi Gratis
         </h2>
         <p className="mb-8 text-lg text-muted-foreground">
-          Comienza hoy y descubre por qué cientos de negocios
-          ya gestionan sus ventas con woppi.
+          Comienza hoy y gestiona tu negocio de la forma más simple.
+        </p>
+        <p className="mb-8 text-sm text-muted-foreground/70">
+          Sin tarjeta de crédito · Sin contrato · Cancela cuando quieras
         </p>
 
         <a

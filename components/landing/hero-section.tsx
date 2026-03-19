@@ -1,6 +1,6 @@
 'use client';
 
-import { ArrowRight, MessageCircle, ShoppingCart, Smartphone, BarChart3, Globe, Sparkles, TrendingUp } from 'lucide-react';
+import { ArrowRight, MessageCircle, ShoppingCart, Smartphone, BarChart3, Globe, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { motion, type Variants, type Easing } from 'framer-motion';
@@ -277,6 +277,26 @@ export function HeroSection() {
                 />
               </motion.div>
 
+              {/* Floating badge */}
+              <motion.div
+                className="absolute right-[10%] top-[20%] z-30 flex items-center gap-2 rounded-xl px-4 py-3 shadow-xl backdrop-blur-xl"
+                initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ delay: 1, duration: 0.6 }}
+                style={{
+                  background: 'rgba(255, 255, 255, 0.95)',
+                  animation: 'hero-float 4s ease-in-out infinite 1s'
+                }}
+              >
+                <div className="flex size-8 items-center justify-center rounded-lg bg-green-100">
+                  <Sparkles className="size-4 text-green-600" />
+                </div>
+                <div>
+                  <p className="text-sm font-bold text-gray-900">100% gratis</p>
+                  <p className="text-xs text-gray-500">para empezar</p>
+                </div>
+              </motion.div>
+
               {/* Tertiary screenshot - right */}
               <motion.div
                 className="absolute -right-[20px] bottom-[15%] w-[260px]"
@@ -298,25 +318,6 @@ export function HeroSection() {
                 />
               </motion.div>
 
-              {/* Floating stats badge */}
-              <motion.div
-                className="absolute right-[10%] top-[20%] z-30 flex items-center gap-2 rounded-xl px-4 py-3 shadow-xl backdrop-blur-xl"
-                initial={{ opacity: 0, y: 20, scale: 0.9 }}
-                animate={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ delay: 1, duration: 0.6 }}
-                style={{
-                  background: 'rgba(255, 255, 255, 0.95)',
-                  animation: 'hero-float 4s ease-in-out infinite 1s'
-                }}
-              >
-                <div className="flex size-8 items-center justify-center rounded-lg bg-green-100">
-                  <TrendingUp className="size-4 text-green-600" />
-                </div>
-                <div>
-                  <p className="text-sm font-bold text-gray-900">+2,500</p>
-                  <p className="text-xs text-gray-500">negocios activos</p>
-                </div>
-              </motion.div>
             </div>
           </div>
         </motion.div>
@@ -431,25 +432,6 @@ export function HeroSection() {
           </motion.div>
         </motion.div>
       </section>
-
-      {/* Diagonal separator */}
-      <div
-        className="relative h-[120px]"
-        style={{
-          background: 'linear-gradient(180deg, hsl(263, 58%, 25%) 0%, hsl(263, 58%, 33%) 100%)'
-        }}
-      >
-        <svg
-          viewBox="0 0 1440 120"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute inset-0 h-full w-full"
-          preserveAspectRatio="none"
-        >
-          <polygon points="0,120 1440,120 1440,0" fill="white" />
-          <line x1="1440" y1="0" x2="0" y2="120" stroke="rgba(255,255,255,0.1)" strokeWidth="1" />
-        </svg>
-      </div>
 
       {/* Float animation keyframes */}
       <style jsx global>{`

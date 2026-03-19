@@ -6,7 +6,7 @@ import { CtaSection } from '@/components/landing/cta-section';
 import { FaqSection } from '@/components/landing/faq-section';
 import { LandingFooter } from '@/components/landing/landing-footer';
 import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
-import { ImagePlaceholder } from '@/components/landing/image-placeholder';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Programa de Lealtad Digital — Sellos y Puntos | woppi',
@@ -30,9 +30,36 @@ export default function ProgramaDeLealtadPage() {
       <main className="bg-background">
 
         {/* ── HERO ──────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-primary px-4 pt-28 pb-0 md:pt-36">
-          {/* Glow — secondary color */}
-          <div className="pointer-events-none absolute top-0 left-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-secondary/15 blur-[160px]" />
+        <section
+          className="relative overflow-hidden px-4 pt-28 pb-0 md:pt-36"
+          style={{
+            background: 'linear-gradient(180deg, hsl(262, 83%, 40%) 0%, hsl(263, 58%, 33%) 30%, hsl(263, 58%, 28%) 70%, hsl(263, 58%, 25%) 100%)'
+          }}
+        >
+          {/* Decorative orbs */}
+          <div
+            className="absolute left-[20%] top-[10%] h-[500px] w-[500px] rounded-full opacity-20"
+            style={{
+              background: 'hsl(39, 85%, 60%)',
+              filter: 'blur(120px)'
+            }}
+          />
+          <div
+            className="absolute -right-[100px] top-[40%] h-[400px] w-[400px] rounded-full opacity-15"
+            style={{
+              background: 'hsl(262, 83%, 58%)',
+              filter: 'blur(100px)'
+            }}
+          />
+
+          {/* Subtle grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '40px 40px'
+            }}
+          />
 
           <div className="relative mx-auto max-w-5xl text-center">
             {/* Eyebrow */}
@@ -60,7 +87,7 @@ export default function ProgramaDeLealtadPage() {
                 href={REGISTER_URL}
                 className="inline-flex items-center gap-2 rounded-full bg-secondary px-8 py-3.5 text-base font-bold text-white shadow-lg transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98]"
               >
-                Activar mi programa gratis
+                Probar programa de lealtad gratis
                 <ArrowRight className="size-4" />
               </a>
             </div>
@@ -74,26 +101,51 @@ export default function ProgramaDeLealtadPage() {
 
             {/* Hero image placeholder */}
             <div className="relative -mb-1 mt-14">
-              {/*
-                IMAGEN: Celular (mockup de iPhone) mostrando la tarjeta de sellos
-                del cliente con 7 de 10 sellos completados, nombre del negocio visible
-                y el texto motivacional "¡3 sellos más para tu café gratis!".
-                Formato: 1600×900px PNG — Ruta: /public/screenshots/loyalty-hero.png
-              */}
-              <ImagePlaceholder
-                label="Captura: Tarjeta de sellos en celular"
-                title="Tarjeta digital con sellos acumulados del cliente"
-                description="Mockup de iPhone mostrando la tarjeta de sellos con 7/10 completados, nombre del negocio en la parte superior y mensaje motivacional. Fondo oscuro o claro."
-                aspectRatio="16/9"
+              <Image
+                src="/screenshots/loyalty-hero.png"
+                alt="Programa de lealtad woppi — dashboard de sellos y puntos"
+                width={1600}
+                height={900}
                 className="rounded-t-2xl border-t border-x border-white/10 shadow-2xl shadow-black/50"
+                priority
               />
             </div>
           </div>
         </section>
 
         {/* ── PROBLEMA ──────────────────────────────────────────────────── */}
-        <section className="bg-primary/95 px-4 py-16 md:py-24">
-          <div className="mx-auto max-w-4xl">
+        <section
+          className="relative overflow-hidden px-4 py-16 md:py-24"
+          style={{
+            background: 'linear-gradient(180deg, hsl(263, 58%, 25%) 0%, hsl(263, 58%, 28%) 50%, hsl(263, 58%, 30%) 100%)'
+          }}
+        >
+          {/* Decorative orbs - continuing from hero */}
+          <div
+            className="absolute -left-[150px] top-[20%] h-[400px] w-[400px] rounded-full opacity-10"
+            style={{
+              background: 'hsl(262, 83%, 58%)',
+              filter: 'blur(100px)'
+            }}
+          />
+          <div
+            className="absolute -right-[100px] bottom-[10%] h-[300px] w-[300px] rounded-full opacity-15"
+            style={{
+              background: 'hsl(39, 85%, 60%)',
+              filter: 'blur(80px)'
+            }}
+          />
+
+          {/* Subtle grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '40px 40px'
+            }}
+          />
+
+          <div className="relative mx-auto max-w-4xl">
             <div className="mb-10 text-center">
               <p className="mb-3 text-sm font-bold uppercase tracking-widest text-red-400">¿Te suena familiar?</p>
               <h2 className="text-3xl font-bold text-white md:text-4xl">
@@ -107,13 +159,24 @@ export default function ProgramaDeLealtadPage() {
                 'No sabes quiénes son tus mejores clientes ni con qué frecuencia vienen',
                 'Haces promociones a ciegas sin saber qué recompensa realmente funciona',
               ].map((pain) => (
-                <div key={pain} className="flex items-start gap-3 rounded-xl border border-red-500/10 bg-red-500/5 p-4">
+                <div
+                  key={pain}
+                  className="flex items-start gap-3 rounded-xl border border-red-500/20 p-4 backdrop-blur-sm"
+                  style={{
+                    background: 'rgba(239, 68, 68, 0.08)'
+                  }}
+                >
                   <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-bold text-red-400">✕</div>
                   <p className="text-sm leading-relaxed text-white/70">{pain}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-6 rounded-2xl border border-secondary/20 bg-secondary/5 p-6 text-center">
+            <div
+              className="mt-8 rounded-2xl border border-secondary/30 p-6 text-center backdrop-blur-sm"
+              style={{
+                background: 'rgba(233, 160, 51, 0.1)'
+              }}
+            >
               <p className="text-lg font-semibold text-white">
                 woppi convierte cada compra en un motivo para volver. Tú defines las reglas, el sistema hace el resto.
               </p>
@@ -159,17 +222,12 @@ export default function ProgramaDeLealtadPage() {
 
             {/* Feature 1 — imagen izquierda */}
             <div className="mb-20 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-              {/*
-                IMAGEN: Pantalla del cliente mostrando la tarjeta de sellos digital
-                con 8 de 10 completados y el mensaje "¡2 sellos más para tu recompensa!".
-                Mockup de celular. Ruta: /public/screenshots/loyalty-stamps.png — 800×600px
-              */}
-              <ImagePlaceholder
-                label="Captura: Tarjeta de sellos"
-                title="Sellos digitales en el celular del cliente"
-                description="Pantalla con la tarjeta de sellos: 8/10 completados, nombre del negocio y mensaje motivacional. Sin app adicional — funciona desde el navegador del celular."
-                aspectRatio="4/3"
-                className="md:order-1"
+              <Image
+                src="/screenshots/loyalty-stamps.png"
+                alt="Lista de miembros del programa de lealtad"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg md:order-1"
               />
               <div className="md:order-2">
                 <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-secondary/10 px-3 py-1.5 text-sm font-semibold text-secondary">
@@ -207,34 +265,23 @@ export default function ProgramaDeLealtadPage() {
                   ))}
                 </ul>
               </div>
-              {/*
-                IMAGEN: Pantalla del cliente mostrando su balance de puntos
-                (ej: "320 puntos acumulados") con el historial de las últimas
-                visitas y cuánto falta para la siguiente recompensa.
-                Ruta: /public/screenshots/loyalty-points.png — 800×600px
-              */}
-              <ImagePlaceholder
-                label="Captura: Balance de puntos"
-                title="Puntos acumulados y progreso hacia la recompensa"
-                description="Pantalla del cliente: balance de puntos en grande (ej: 320 pts), barra de progreso hacia la siguiente recompensa y las últimas 3 transacciones con puntos ganados."
-                aspectRatio="4/3"
+              <Image
+                src="/screenshots/loyalty-points.png"
+                alt="Detalle de miembro — puntos y sellos acumulados"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg"
               />
             </div>
 
             {/* Feature 3 — imagen izquierda */}
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-              {/*
-                IMAGEN: Dashboard del negocio mostrando:
-                - Top 5 clientes más fieles (nombre, visitas, puntos)
-                - Métricas: "42% retención este mes", "38 canjes", "156 miembros activos"
-                Ruta: /public/screenshots/loyalty-dashboard.png — 800×600px
-              */}
-              <ImagePlaceholder
-                label="Captura: Dashboard de miembros"
-                title="Tus mejores clientes y métricas de retención"
-                description="Panel del negocio: tabla con top clientes por visitas y gasto, métricas de retención del mes, total de canjes realizados y gráfico de actividad del programa."
-                aspectRatio="4/3"
-                className="md:order-1"
+              <Image
+                src="/screenshots/loyalty-dashboard.png"
+                alt="Dashboard de lealtad — métricas y miembros activos"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg md:order-1"
               />
               <div className="md:order-2">
                 <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-secondary/10 px-3 py-1.5 text-sm font-semibold text-secondary">
@@ -256,23 +303,6 @@ export default function ProgramaDeLealtadPage() {
           </div>
         </section>
 
-        {/* ── TESTIMONIO ────────────────────────────────────────────────── */}
-        {/*
-          PON AQUÍ un testimonio real de un cliente que use el programa de lealtad.
-          Ideal: alguien que pueda dar un número concreto de retención o frecuencia
-          (ej: "mis clientas vienen 2 veces más al mes desde que activé los sellos"
-          o "el 60% de mis ventas ya son de clientes que regresan").
-        */}
-        <section className="bg-background px-4 py-16">
-          <div className="mx-auto max-w-3xl">
-            <ImagePlaceholder
-              label="Testimonio real de cliente"
-              title="Foto del cliente + resultado concreto en retención"
-              description="Foto circular del dueño del negocio. Quote con resultado concreto: aumento en visitas repetidas, porcentaje de retención mejorado o frecuencia de regreso de clientes. Nombre, negocio y ciudad."
-              aspectRatio="3/1"
-            />
-          </div>
-        </section>
 
         <PricingSection />
         <FaqSection />

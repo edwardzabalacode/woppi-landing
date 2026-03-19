@@ -6,7 +6,7 @@ import { CtaSection } from '@/components/landing/cta-section';
 import { FaqSection } from '@/components/landing/faq-section';
 import { LandingFooter } from '@/components/landing/landing-footer';
 import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
-import { ImagePlaceholder } from '@/components/landing/image-placeholder';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Tienda Online con Pedidos por WhatsApp | woppi',
@@ -30,9 +30,36 @@ export default function TiendaOnlinePage() {
       <main className="bg-background">
 
         {/* ── HERO ──────────────────────────────────────────────────────── */}
-        <section className="relative overflow-hidden bg-primary px-4 pt-28 pb-0 md:pt-36">
-          {/* Glow — secondary color */}
-          <div className="pointer-events-none absolute top-0 left-1/4 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-secondary/15 blur-[160px]" />
+        <section
+          className="relative overflow-hidden px-4 pt-28 pb-0 md:pt-36"
+          style={{
+            background: 'linear-gradient(180deg, hsl(262, 83%, 40%) 0%, hsl(263, 58%, 33%) 30%, hsl(263, 58%, 28%) 70%, hsl(263, 58%, 25%) 100%)'
+          }}
+        >
+          {/* Decorative orbs */}
+          <div
+            className="absolute left-[20%] top-[10%] h-[500px] w-[500px] rounded-full opacity-20"
+            style={{
+              background: 'hsl(39, 85%, 60%)',
+              filter: 'blur(120px)'
+            }}
+          />
+          <div
+            className="absolute -right-[100px] top-[40%] h-[400px] w-[400px] rounded-full opacity-15"
+            style={{
+              background: 'hsl(262, 83%, 58%)',
+              filter: 'blur(100px)'
+            }}
+          />
+
+          {/* Subtle grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.03]"
+            style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '40px 40px'
+            }}
+          />
 
           <div className="relative mx-auto max-w-5xl text-center">
             {/* Eyebrow */}
@@ -74,26 +101,51 @@ export default function TiendaOnlinePage() {
 
             {/* Hero image placeholder */}
             <div className="relative -mb-1 mt-14">
-              {/*
-                IMAGEN: Vista del catálogo online en celular (mockup de iPhone).
-                Muestra: portada con logo del negocio, barra de categorías,
-                grid de productos con fotos y precios en USD.
-                Formato: 1600×900px PNG — Ruta: /public/screenshots/store-hero.png
-              */}
-              <ImagePlaceholder
-                label="Captura: Tienda online en celular"
-                title="Catálogo de productos con fotos y precios"
-                description="Vista del cliente: portada con logo del negocio, categorías filtrables y grid de productos con fotos y precios en USD. Mockup de iPhone o pantalla limpia."
-                aspectRatio="16/9"
+              <Image
+                src="/screenshots/store-hero.png"
+                alt="Tienda online FuegoBurger — catálogo con productos y precios"
+                width={1600}
+                height={900}
                 className="rounded-t-2xl border-t border-x border-white/10 shadow-2xl shadow-black/50"
+                priority
               />
             </div>
           </div>
         </section>
 
         {/* ── PROBLEMA ──────────────────────────────────────────────────── */}
-        <section className="bg-primary/95 px-4 py-16 md:py-24">
-          <div className="mx-auto max-w-4xl">
+        <section
+          className="relative overflow-hidden px-4 py-16 md:py-24"
+          style={{
+            background: 'linear-gradient(180deg, hsl(263, 58%, 25%) 0%, hsl(263, 58%, 28%) 50%, hsl(263, 58%, 30%) 100%)'
+          }}
+        >
+          {/* Decorative orbs - continuing from hero */}
+          <div
+            className="absolute -left-[150px] top-[20%] h-[400px] w-[400px] rounded-full opacity-10"
+            style={{
+              background: 'hsl(262, 83%, 58%)',
+              filter: 'blur(100px)'
+            }}
+          />
+          <div
+            className="absolute -right-[100px] bottom-[10%] h-[300px] w-[300px] rounded-full opacity-15"
+            style={{
+              background: 'hsl(39, 85%, 60%)',
+              filter: 'blur(80px)'
+            }}
+          />
+
+          {/* Subtle grid pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.02]"
+            style={{
+              backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+              backgroundSize: '40px 40px'
+            }}
+          />
+
+          <div className="relative mx-auto max-w-4xl">
             <div className="mb-10 text-center">
               <p className="mb-3 text-sm font-bold uppercase tracking-widest text-red-400">¿Te suena familiar?</p>
               <h2 className="text-3xl font-bold text-white md:text-4xl">
@@ -107,13 +159,24 @@ export default function TiendaOnlinePage() {
                 'Pagas comisiones altísimas a apps de delivery que se quedan con tus ganancias',
                 'Los pedidos a domicilio son un caos de mensajes sin formato ni orden',
               ].map((pain) => (
-                <div key={pain} className="flex items-start gap-3 rounded-xl border border-red-500/10 bg-red-500/5 p-4">
+                <div
+                  key={pain}
+                  className="flex items-start gap-3 rounded-xl border border-red-500/20 p-4 backdrop-blur-sm"
+                  style={{
+                    background: 'rgba(239, 68, 68, 0.08)'
+                  }}
+                >
                   <div className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-red-500/20 text-xs font-bold text-red-400">✕</div>
                   <p className="text-sm leading-relaxed text-white/70">{pain}</p>
                 </div>
               ))}
             </div>
-            <div className="mt-6 rounded-2xl border border-secondary/20 bg-secondary/5 p-6 text-center">
+            <div
+              className="mt-8 rounded-2xl border border-secondary/30 p-6 text-center backdrop-blur-sm"
+              style={{
+                background: 'rgba(233, 160, 51, 0.1)'
+              }}
+            >
               <p className="text-lg font-semibold text-white">
                 Con woppi tu catálogo está siempre actualizado y tus clientes piden solos — sin comisiones.
               </p>
@@ -159,17 +222,12 @@ export default function TiendaOnlinePage() {
 
             {/* Feature 1 — imagen izquierda */}
             <div className="mb-20 grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-              {/*
-                IMAGEN: Vista lado a lado del POS y la tienda online mostrando
-                el mismo producto actualizado en ambas pantallas simultáneamente.
-                Ruta: /public/screenshots/store-sync.png — 800×600px
-              */}
-              <ImagePlaceholder
-                label="Captura: Sincronización automática"
-                title="POS y tienda online actualizados en tiempo real"
-                description="Dos pantallas: izquierda el POS con un producto editado, derecha la tienda online mostrando el mismo producto ya actualizado. Visualmente conectados con una flecha o animación."
-                aspectRatio="4/3"
-                className="md:order-1"
+              <Image
+                src="/screenshots/store-sync.png"
+                alt="Editor de tienda online sincronizado con el POS"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg md:order-1"
               />
               <div className="md:order-2">
                 <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-secondary/10 px-3 py-1.5 text-sm font-semibold text-secondary">
@@ -207,33 +265,51 @@ export default function TiendaOnlinePage() {
                   ))}
                 </ul>
               </div>
-              {/*
-                IMAGEN: Captura de un chat de WhatsApp mostrando el mensaje
-                automático del pedido: "🛒 Pedido de Carlos P. — Pizza Margarita x2 ($8.00),
-                Agua x1 ($1.00) — Total: $17.00. Dirección: Urb. Las Mercedes..."
-                Ruta: /public/screenshots/store-whatsapp.png — 800×600px
-              */}
-              <ImagePlaceholder
-                label="Captura: Pedido en WhatsApp"
-                title="Mensaje formateado con el detalle del pedido"
-                description='Chat de WhatsApp con el mensaje automático del cliente: lista de productos, cantidades, precios, total y datos de entrega. Muestra que llega completo y ordenado.'
-                aspectRatio="4/3"
-              />
+              {/* WhatsApp chat mockup */}
+              <div className="overflow-hidden rounded-2xl border border-gray-200 bg-[#e5ddd5] shadow-lg" style={{ aspectRatio: '4/3' }}>
+                {/* WhatsApp header */}
+                <div className="flex items-center gap-3 bg-[#075e54] px-4 py-3">
+                  <div className="flex size-9 items-center justify-center rounded-full bg-white/20 text-sm font-bold text-white">C</div>
+                  <div>
+                    <p className="text-sm font-semibold text-white">Carlos P.</p>
+                    <p className="text-xs text-white/70">en línea</p>
+                  </div>
+                </div>
+                {/* Chat bubble */}
+                <div className="flex flex-col gap-2 p-4">
+                  <div className="max-w-[85%] rounded-lg rounded-tl-none bg-white px-4 py-3 shadow-sm">
+                    <p className="mb-2 text-sm font-semibold text-gray-800">Nuevo pedido de FuegoBurger</p>
+                    <div className="mb-2 space-y-0.5 text-sm text-gray-600">
+                      <p>Hamburguesa Especial x2 — $6.00</p>
+                      <p>Papas Fritas Grandes x1 — $3.00</p>
+                      <p>Refresco x2 — $2.00</p>
+                    </div>
+                    <div className="mb-2 border-t border-gray-100 pt-2">
+                      <p className="text-sm font-bold text-gray-800">Total: $17.00</p>
+                    </div>
+                    <div className="border-t border-gray-100 pt-2 text-xs text-gray-500">
+                      <p>Cliente: Carlos Pérez</p>
+                      <p>Tel: +58 412-1234567</p>
+                      <p>Dirección: Urb. Las Mercedes, Calle 4</p>
+                    </div>
+                    <p className="mt-1 text-right text-[10px] text-gray-400">2:34 PM</p>
+                  </div>
+                  <div className="max-w-[60%] self-end rounded-lg rounded-tr-none bg-[#dcf8c6] px-4 py-2 shadow-sm">
+                    <p className="text-sm text-gray-700">Recibido! En 25 min está listo 🔥</p>
+                    <p className="mt-1 text-right text-[10px] text-gray-400">2:35 PM ✓✓</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Feature 3 — imagen izquierda */}
             <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2">
-              {/*
-                IMAGEN: Código QR grande generado para la tienda, junto al panel
-                de personalización con el logo del negocio subido y la URL custom visible.
-                Ruta: /public/screenshots/store-qr-branding.png — 800×600px
-              */}
-              <ImagePlaceholder
-                label="Captura: QR y personalización"
-                title="QR listo para imprimir + logo y colores del negocio"
-                description="Panel de personalización con el QR generado a la izquierda (listo para imprimir) y el formulario de branding a la derecha: logo subido, color de marca y URL personalizada."
-                aspectRatio="4/3"
-                className="md:order-1"
+              <Image
+                src="/screenshots/store-qr-branding.png"
+                alt="Código QR de la tienda online con personalización"
+                width={800}
+                height={600}
+                className="rounded-2xl shadow-lg md:order-1"
               />
               <div className="md:order-2">
                 <div className="mb-3 inline-flex items-center gap-2 rounded-lg bg-secondary/10 px-3 py-1.5 text-sm font-semibold text-secondary">
@@ -255,23 +331,6 @@ export default function TiendaOnlinePage() {
           </div>
         </section>
 
-        {/* ── TESTIMONIO ────────────────────────────────────────────────── */}
-        {/*
-          PON AQUÍ un testimonio real de un cliente que use la tienda online.
-          Ideal: alguien que reciba pedidos por WhatsApp y pueda dar un número
-          concreto (ej: "mis ventas a domicilio subieron 40%" o "recibo 20 pedidos
-          al día por WhatsApp sin tener que responder preguntas").
-        */}
-        <section className="bg-background px-4 py-16">
-          <div className="mx-auto max-w-3xl">
-            <ImagePlaceholder
-              label="Testimonio real de cliente"
-              title="Foto del cliente + resultado concreto de su tienda online"
-              description="Foto circular del dueño del negocio. Quote sobre el impacto de la tienda online: pedidos recibidos, ventas aumentadas o tiempo ahorrado. Nombre, negocio y ciudad."
-              aspectRatio="3/1"
-            />
-          </div>
-        </section>
 
         <PricingSection />
         <FaqSection />

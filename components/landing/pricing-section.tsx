@@ -177,7 +177,7 @@ export function PricingSection() {
                   </span>
                 </div>
                 <p className="text-sm text-white/70">
-                  Comienza gratis hoy
+                  Prueba todas las funciones por 14 días
                 </p>
               </div>
               <a
@@ -188,9 +188,10 @@ export function PricingSection() {
                   boxShadow: '0 4px 20px hsl(39, 85%, 60%, 0.4)'
                 }}
               >
-                Comenzar
+                Comenzar gratis
                 <ArrowRight className="size-4 transition-transform duration-300 group-hover:translate-x-1" />
               </a>
+              <p className="mt-2 text-xs text-white/50 sm:hidden">Sin tarjeta de crédito</p>
             </div>
           </div>
         </motion.div>

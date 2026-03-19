@@ -16,42 +16,42 @@ const FAQS_VE: FaqItem[] = [
   {
     question: '¿Qué es woppi?',
     answer:
-      'woppi es un sistema de punto de venta (POS) diseñado para negocios en Venezuela. Funciona desde tu celular o computadora y soporta doble moneda USD/VES con tasa BCV automática.',
+      'woppi es un sistema para gestionar tu negocio desde el celular o la computadora. Registras ventas, controlas tu inventario, tienes tu tienda online y fidelizas clientes — todo en un solo lugar. Y lo mejor: maneja dólares y bolívares con la tasa BCV del día.',
   },
   {
-    question: '¿Cuánto cuesta woppi?',
+    question: '¿Cuánto cuesta?',
     answer:
-      'woppi es gratis para empezar. Regístrate y prueba todas las funcionalidades sin compromiso.',
+      'Puedes empezar gratis con hasta 30 productos, punto de venta, tienda online y reportes. Si necesitas más (inventario, programa de lealtad, mesas), puedes probar todo gratis por 14 días sin compromiso.',
   },
   {
-    question: '¿Necesito internet para usarlo?',
+    question: '¿Necesito descargar algo?',
     answer:
-      'woppi es una PWA (Progressive Web App). Necesitas internet para sincronizar datos, pero puedes instalarla en tu celular y funciona con conexiones lentas.',
+      'No. woppi funciona directo desde el navegador de tu celular, tablet o computadora. Solo abre la página, inicia sesión y listo. También puedes agregarla a tu pantalla de inicio como si fuera una app.',
   },
   {
-    question: '¿Cómo funciona la doble moneda?',
+    question: '¿Cómo funciona lo de dólares y bolívares?',
     answer:
-      'woppi descarga la tasa BCV automáticamente todos los días. Tus precios en USD se convierten a bolívares al instante. Puedes cobrar en USD, VES o combinar métodos de pago en una misma venta.',
+      'woppi actualiza la tasa BCV automáticamente todos los días. Tú pones tus precios en dólares y el sistema calcula los bolívares solo. Puedes cobrar en USD, VES o mezclar métodos de pago en una misma venta.',
   },
   {
-    question: '¿Qué métodos de pago soporta?',
+    question: '¿Con qué puedo cobrar?',
     answer:
-      'Efectivo en USD y VES, Pago Móvil, Zelle, transferencia bancaria, punto (tarjeta) y más. Puedes combinar varios métodos en una misma venta.',
+      'Efectivo en dólares o bolívares, Pago Móvil, Zelle, transferencia, punto de venta (tarjeta) y más. Si tu cliente quiere pagar con dos métodos en la misma compra, woppi lo permite.',
   },
   {
-    question: '¿Cómo funciona la importación con IA?',
+    question: '¿Qué hace la inteligencia artificial de woppi?',
     answer:
-      'Subes una foto de tu menú y Google Gemini analiza la imagen para extraer productos, precios y categorías automáticamente. Puedes editarlos antes de guardar.',
+      'woppi usa IA para ayudarte con tu negocio. Por ejemplo, puedes tomar una foto de tu menú y el sistema extrae los productos, precios y categorías automáticamente. Tú solo revisas y guardas.',
   },
   {
-    question: '¿Puedo usar woppi en varios dispositivos?',
+    question: '¿Lo puedo usar en varios dispositivos a la vez?',
     answer:
-      'Sí, woppi funciona en cualquier navegador. Varios usuarios pueden acceder simultáneamente con diferentes roles (dueño, administrador, cajero).',
+      'Sí. Puedes tener woppi abierto en tu celular, en la caja y en la computadora al mismo tiempo. Cada persona puede tener su propio acceso con permisos diferentes.',
   },
   {
-    question: '¿Es seguro?',
+    question: '¿Mis datos están seguros?',
     answer:
-      'woppi usa Supabase con encriptación y Row Level Security. Tus datos están protegidos y completamente aislados de otros negocios.',
+      'Totalmente. Toda la información de tu negocio está cifrada y protegida. Nadie más puede ver tus datos — ni siquiera otros negocios que usen woppi. Además, hacemos respaldos automáticos.',
   },
 ];
 
@@ -59,42 +59,42 @@ const FAQS_INTL: FaqItem[] = [
   {
     question: '¿Qué es woppi?',
     answer:
-      'woppi es un sistema de punto de venta (POS) diseñado para cualquier tipo de negocio. Funciona desde tu celular o computadora y soporta multi-moneda con conversión automática.',
+      'woppi es un sistema para gestionar tu negocio desde el celular o la computadora. Registras ventas, controlas tu inventario, tienes tu tienda online y fidelizas clientes — todo en un solo lugar.',
   },
   {
-    question: '¿Cuánto cuesta woppi?',
+    question: '¿Cuánto cuesta?',
     answer:
-      'woppi es gratis para empezar. Regístrate y prueba todas las funcionalidades sin compromiso.',
+      'Puedes empezar gratis con hasta 30 productos, punto de venta, tienda online y reportes. Si necesitas más (inventario, programa de lealtad, mesas), puedes probar todo gratis por 14 días sin compromiso.',
   },
   {
-    question: '¿Necesito internet para usarlo?',
+    question: '¿Necesito descargar algo?',
     answer:
-      'woppi es una PWA (Progressive Web App). Necesitas internet para sincronizar datos, pero puedes instalarla en tu celular y funciona con conexiones lentas.',
+      'No. woppi funciona directo desde el navegador de tu celular, tablet o computadora. Solo abre la página, inicia sesión y listo. También puedes agregarla a tu pantalla de inicio como si fuera una app.',
   },
   {
-    question: '¿Cómo funciona la multi-moneda?',
+    question: '¿Cómo funciona con diferentes monedas?',
     answer:
-      'Configuras tu moneda local al crear tu cuenta. Todos los precios se convierten al instante. Puedes cobrar en diferentes monedas o combinar métodos de pago en una misma venta.',
+      'Configuras tu moneda al crear tu cuenta y listo. Los precios se convierten automáticamente. Si tu cliente quiere pagar con diferentes métodos o monedas en la misma compra, woppi lo permite.',
   },
   {
-    question: '¿Qué métodos de pago soporta?',
+    question: '¿Con qué puedo cobrar?',
     answer:
-      'Efectivo, transferencia bancaria, tarjeta y otros métodos locales. Puedes combinar varios métodos en una misma venta.',
+      'Efectivo, transferencia, tarjeta y otros métodos de pago locales. Si tu cliente quiere pagar con dos métodos en la misma compra, woppi lo permite sin problema.',
   },
   {
-    question: '¿Cómo funciona la importación con IA?',
+    question: '¿Qué hace la inteligencia artificial de woppi?',
     answer:
-      'Subes una foto de tu menú y Google Gemini analiza la imagen para extraer productos, precios y categorías automáticamente. Puedes editarlos antes de guardar.',
+      'woppi usa IA para ayudarte con tu negocio. Por ejemplo, puedes tomar una foto de tu menú y el sistema extrae los productos, precios y categorías automáticamente. Tú solo revisas y guardas.',
   },
   {
-    question: '¿Puedo usar woppi en varios dispositivos?',
+    question: '¿Lo puedo usar en varios dispositivos a la vez?',
     answer:
-      'Sí, woppi funciona en cualquier navegador. Varios usuarios pueden acceder simultáneamente con diferentes roles (dueño, administrador, cajero).',
+      'Sí. Puedes tener woppi abierto en tu celular, en la caja y en la computadora al mismo tiempo. Cada persona puede tener su propio acceso con permisos diferentes.',
   },
   {
-    question: '¿Es seguro?',
+    question: '¿Mis datos están seguros?',
     answer:
-      'woppi usa Supabase con encriptación y Row Level Security. Tus datos están protegidos y completamente aislados de otros negocios.',
+      'Totalmente. Toda la información de tu negocio está cifrada y protegida. Nadie más puede ver tus datos — ni siquiera otros negocios que usen woppi. Además, hacemos respaldos automáticos.',
   },
 ];
 

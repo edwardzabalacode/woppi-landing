@@ -10,6 +10,7 @@ import { FeatureCardsSection } from '@/components/landing/feature-cards-section'
 import { CtaSection } from '@/components/landing/cta-section';
 import { FaqSection } from '@/components/landing/faq-section';
 import { LandingFooter } from '@/components/landing/landing-footer';
+import { SocialSection } from '@/components/landing/social-section';
 import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
 
 export const metadata: Metadata = {
@@ -49,6 +50,7 @@ export default function LandingPage() {
         <FeatureCardsSection />
         <CtaSection />
         <FaqSection />
+        <SocialSection />
       </main>
       <LandingFooter />
       <WhatsAppFloat />

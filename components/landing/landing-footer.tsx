@@ -1,30 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { Instagram, Twitter, Facebook } from 'lucide-react';
+import { Instagram } from 'lucide-react';
+
+function TikTokIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.3 0 .59.05.86.12V9.01a6.27 6.27 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.55a8.16 8.16 0 0 0 4.77 1.52V6.69h-1.01z" />
+    </svg>
+  );
+}
 
 const PRODUCT_LINKS = [
-  { label: 'Punto de Venta', href: '/features/pos' },
-  { label: 'Tienda Online', href: '/features/store' },
-  { label: 'Programa de Lealtad', href: '/features/loyalty' },
+  { label: 'Punto de Venta', href: '/point-of-sale' },
+  { label: 'Tienda Online', href: '/online-store' },
+  { label: 'Programa de Lealtad', href: '/loyalty-program' },
   { label: 'Precios', href: '/pricing' },
 ];
 
-const BUSINESS_LINKS = [
-  { label: 'Restaurantes', href: '/restaurants' },
-  { label: 'Comercios', href: '/retail' },
-  { label: 'Servicios', href: '/services' },
-  { label: 'Mercados', href: '/markets' },
-];
-
 const LEGAL_LINKS = [
-  { label: 'Terminos de Servicio', href: '#' },
-  { label: 'Politica de Privacidad', href: '#' },
+  { label: 'Términos de Servicio', href: '/terms' },
+  { label: 'Política de Privacidad', href: '/privacy' },
 ];
 
 const SOCIAL_LINKS = [
-  { icon: Instagram, href: '#', label: 'Instagram' },
-  { icon: Twitter, href: '#', label: 'Twitter' },
-  { icon: Facebook, href: '#', label: 'Facebook' },
+  { icon: Instagram, href: 'https://instagram.com/woppi.me', label: 'Instagram' },
+  { icon: TikTokIcon, href: 'https://tiktok.com/@woppi.me', label: 'TikTok' },
 ];
 
 export function LandingFooter() {
@@ -45,7 +45,7 @@ export function LandingFooter() {
       />
 
       <div className="relative mx-auto max-w-6xl">
-        <div className="grid grid-cols-2 gap-8 md:grid-cols-5">
+        <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2">
             <Link href="/" className="inline-block">
@@ -90,25 +90,6 @@ export function LandingFooter() {
                   >
                     {link.label}
                   </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Negocios */}
-          <div>
-            <h4 className="mb-4 text-sm font-semibold uppercase tracking-wider text-white">
-              Negocios
-            </h4>
-            <ul className="space-y-3">
-              {BUSINESS_LINKS.map((link) => (
-                <li key={link.label}>
-                  <Link
-                    href={link.href}
-                    className="text-sm transition-colors hover:text-secondary"
-                  >
-                    {link.label}
-                  </Link>
                 </li>
               ))}
             </ul>

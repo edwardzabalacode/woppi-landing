@@ -42,8 +42,8 @@ const FEATURES_VE = [
   },
   {
     icon: Zap,
-    title: 'Importación IA',
-    description: 'Carga tu menú con una foto',
+    title: 'Herramientas IA',
+    description: 'Potencia tu negocio con inteligencia artificial',
   },
 ];
 
@@ -75,8 +75,8 @@ const FEATURES_INTL = [
   },
   {
     icon: Zap,
-    title: 'Importación IA',
-    description: 'Carga tu menú con una foto',
+    title: 'Herramientas IA',
+    description: 'Potencia tu negocio con inteligencia artificial',
   },
 ];
 

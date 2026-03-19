@@ -5,10 +5,10 @@ import { CtaSection } from '@/components/landing/cta-section';
 import { FaqSection } from '@/components/landing/faq-section';
 import { LandingFooter } from '@/components/landing/landing-footer';
 import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
-import { ImagePlaceholder } from '@/components/landing/image-placeholder';
 import { PuntoDeVentaProblems } from './problems';
 import { PosHero } from './pos-hero';
 import { PosSteps, PosFeatures } from './pos-features';
+import { PosTestimonial } from './pos-testimonial';
 
 export const metadata: Metadata = {
   title: 'Punto de Venta para tu Negocio | woppi',
@@ -33,19 +33,7 @@ export default function PuntoDeVentaPage() {
         <PuntoDeVentaProblems />
         <PosSteps />
         <PosFeatures />
-
-        {/* ── TESTIMONIO ────────────────────────────────────────────────── */}
-        <section className="bg-background px-4 py-16">
-          <div className="mx-auto max-w-3xl">
-            <ImagePlaceholder
-              label="Testimonio real de cliente"
-              title="Foto del cliente + quote con resultado concreto"
-              description='Foto circular (200×200px) del dueño del negocio. Quote real sobre el resultado obtenido con woppi (ej: tiempo ahorrado, errores eliminados, ventas aumentadas). Nombre, negocio y ciudad.'
-              aspectRatio="3/1"
-            />
-          </div>
-        </section>
-
+        <PosTestimonial />
         <PricingSection />
         <FaqSection />
         <CtaSection />
