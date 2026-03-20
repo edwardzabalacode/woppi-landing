@@ -6,9 +6,6 @@ import {
   Smartphone,
   Receipt,
   MessageCircle,
-  Banknote,
-  Sparkles,
-  Users,
 } from 'lucide-react';
 
 const FEATURE_CARDS = [
@@ -16,8 +13,8 @@ const FEATURE_CARDS = [
     icon: Smartphone,
     title: 'Sin Instalación',
     description:
-      'woppi es la forma más simple de empezar. Funciona en cualquier navegador, celular o tablet. Sin descargas.',
-    image: '/screenshots/pos.png',
+      'WOPPI es la forma más simple de empezar. Funciona en cualquier navegador, celular o tablet. Sin descargas.',
+    image: '/screenshots/dashboard.png',
     imagePosition: 'right' as const,
     gradient: 'linear-gradient(135deg, hsl(39, 85%, 97%) 0%, hsl(39, 85%, 93%) 100%)',
     borderColor: 'hsl(39, 85%, 60%, 0.2)',
@@ -27,7 +24,7 @@ const FEATURE_CARDS = [
     title: 'Registra Ventas Fácil',
     description:
       'Punto de venta simplificado y sin complicaciones. Registra tus ventas en segundos con nuestra interfaz intuitiva.',
-    image: '/screenshots/pos.png',
+    image: '/screenshots/pos-carrito.png',
     imagePosition: 'left' as const,
     gradient: 'linear-gradient(135deg, hsl(263, 58%, 97%) 0%, hsl(263, 58%, 93%) 100%)',
     borderColor: 'hsl(263, 58%, 33%, 0.15)',
@@ -36,14 +33,9 @@ const FEATURE_CARDS = [
     icon: MessageCircle,
     title: 'Tienda Online Integrada',
     description:
-      'Recibe tus pedidos directos al WhatsApp. Tus clientes piden desde tu tienda online y tu gestionas todo desde un solo lugar.',
-    logos: [
-      { icon: MessageCircle, color: 'text-green-500' },
-      { icon: Banknote, color: 'text-primary' },
-      { icon: Sparkles, color: 'text-secondary' },
-      { icon: Users, color: 'text-primary' },
-    ],
-    imagePosition: 'icons' as const,
+      'Recibe tus pedidos directos al WhatsApp. Tus clientes piden desde tu tienda online y tú gestionas todo desde un solo lugar.',
+    image: '/screenshots/store-phone-catalog.png',
+    imagePosition: 'right' as const,
     gradient: 'linear-gradient(135deg, hsl(262, 83%, 97%) 0%, hsl(39, 85%, 97%) 100%)',
     borderColor: 'hsl(262, 83%, 58%, 0.15)',
   },
@@ -136,56 +128,31 @@ export function FeatureCardsSection() {
                     card.imagePosition === 'left' ? 'md:order-1' : ''
                   }`}
                 >
-                  {card.imagePosition === 'icons' ? (
-                    <div className="flex items-center justify-center gap-4">
-                      {card.logos?.map((logo, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ scale: 0 }}
-                          whileInView={{ scale: 1 }}
-                          viewport={{ once: true }}
-                          transition={{
-                            type: 'spring',
-                            stiffness: 200,
-                            damping: 15,
-                            delay: 0.1 * i,
-                          }}
-                          className="flex size-16 items-center justify-center rounded-2xl border border-white/50 bg-white md:size-20"
-                          style={{
-                            boxShadow: '0 8px 30px hsl(263, 58%, 33%, 0.1)'
-                          }}
-                        >
-                          <logo.icon className={`size-8 ${logo.color}`} />
-                        </motion.div>
-                      ))}
-                    </div>
-                  ) : (
-                    <motion.div
-                      initial={{ y: 20 }}
-                      animate={{ y: [0, -10, 0] }}
-                      transition={{
-                        duration: 4,
-                        repeat: Infinity,
-                        ease: 'easeInOut',
+                  <motion.div
+                    initial={{ y: 20 }}
+                    animate={{ y: [0, -10, 0] }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                    className="flex justify-center"
+                  >
+                    <div
+                      className="w-48 overflow-hidden rounded-[2rem] border-2 border-white/80 bg-white md:w-56"
+                      style={{
+                        boxShadow: '0 20px 60px hsl(263, 58%, 33%, 0.15)'
                       }}
-                      className="flex justify-center"
                     >
-                      <div
-                        className="w-48 overflow-hidden rounded-[2rem] border-2 border-white/80 bg-white md:w-56"
-                        style={{
-                          boxShadow: '0 20px 60px hsl(263, 58%, 33%, 0.15)'
-                        }}
-                      >
-                        <Image
-                          src={card.image!}
-                          alt={card.title}
-                          width={400}
-                          height={800}
-                          className="h-auto w-full"
-                        />
-                      </div>
-                    </motion.div>
-                  )}
+                      <Image
+                        src={card.image}
+                        alt={card.title}
+                        width={400}
+                        height={800}
+                        className="h-auto w-full"
+                      />
+                    </div>
+                  </motion.div>
                 </div>
               </div>
             </motion.div>

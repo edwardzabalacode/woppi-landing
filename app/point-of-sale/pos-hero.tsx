@@ -57,7 +57,7 @@ export function PosHero() {
           }}
         >
           <Zap className="size-3.5 text-secondary" />
-          <span className="text-sm font-medium text-white/90">Punto de Venta · woppi</span>
+          <span className="text-sm font-medium text-white/90">Punto de Venta · WOPPI</span>
         </motion.div>
 
         {/* Headline */}
@@ -135,7 +135,7 @@ export function PosHero() {
             }}
           >
             <Image
-              src="/screenshots/pos.png"
+              src="/screenshots/pos-carrito.png"
               alt="woppi punto de venta"
               width={1200}
               height={675}

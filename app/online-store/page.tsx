@@ -9,13 +9,13 @@ import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Tienda Online con Pedidos por WhatsApp | woppi',
+  title: 'Tienda Online con Pedidos por WhatsApp | WOPPI',
   description:
     'Crea tu catálogo digital sincronizado con tu punto de venta. Tus clientes ven tus productos y piden directo por WhatsApp. Sin comisiones, sin apps, incluido en tu plan.',
-  keywords: ['tienda online', 'catálogo digital', 'pedidos por WhatsApp', 'menú digital', 'tienda virtual', 'woppi tienda'],
+  keywords: ['tienda online', 'catálogo digital', 'pedidos por WhatsApp', 'menú digital', 'tienda virtual', 'WOPPI tienda'],
   alternates: { canonical: 'https://woppi.app/online-store' },
   openGraph: {
-    title: 'Tienda Online con Pedidos por WhatsApp | woppi',
+    title: 'Tienda Online con Pedidos por WhatsApp | WOPPI',
     description: 'Catálogo digital sincronizado con tu POS. Pedidos por WhatsApp, QR y sin comisiones.',
     type: 'website',
   },
@@ -65,7 +65,7 @@ export default function TiendaOnlinePage() {
             {/* Eyebrow */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary">
               <Globe className="size-3.5" />
-              Tienda Online · woppi
+              Tienda Online · WOPPI
             </div>
 
             {/* Headline */}
@@ -99,16 +99,44 @@ export default function TiendaOnlinePage() {
               <span className="flex items-center gap-1.5"><Check className="size-3.5 text-secondary" /> Lista en minutos</span>
             </div>
 
-            {/* Hero image placeholder */}
-            <div className="relative -mb-1 mt-14">
-              <Image
-                src="/screenshots/store-hero.png"
-                alt="Tienda online FuegoBurger — catálogo con productos y precios"
-                width={1600}
-                height={900}
-                className="rounded-t-2xl border-t border-x border-white/10 shadow-2xl shadow-black/50"
-                priority
-              />
+            {/* Hero — two phone mockups */}
+            <div className="relative -mb-1 mt-14 flex items-end justify-center gap-6 md:gap-10">
+              {/* Phone 1 — Catálogo de productos */}
+              <div className="w-[180px] md:w-[260px]">
+                <div
+                  className="overflow-hidden rounded-[28px] border-[3px] border-white/20 bg-muted/30 shadow-2xl shadow-black/40"
+                  style={{ aspectRatio: '9/19.5' }}
+                >
+                  <Image
+                    src="/screenshots/store-phone-catalog.png"
+                    alt="Catálogo de productos en la tienda online"
+                    width={520}
+                    height={1128}
+                    className="h-full w-full object-cover"
+                    priority
+                  />
+                </div>
+              </div>
+              {/* Arrow between phones */}
+              <div className="flex flex-col items-center gap-1 self-center">
+                <ArrowRight className="size-8 text-secondary md:size-10" />
+              </div>
+              {/* Phone 2 — Pedido por WhatsApp */}
+              <div className="w-[180px] md:w-[260px]">
+                <div
+                  className="overflow-hidden rounded-[28px] border-[3px] border-white/20 bg-muted/30 shadow-2xl shadow-black/40"
+                  style={{ aspectRatio: '9/19.5' }}
+                >
+                  <Image
+                    src="/screenshots/store-phone-whatsapp.png"
+                    alt="Pedido llegando por WhatsApp"
+                    width={520}
+                    height={1128}
+                    className="h-full w-full object-cover"
+                    priority
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -178,7 +206,7 @@ export default function TiendaOnlinePage() {
               }}
             >
               <p className="text-lg font-semibold text-white">
-                Con woppi tu catálogo está siempre actualizado y tus clientes piden solos — sin comisiones.
+                Con WOPPI tu catálogo está siempre actualizado y tus clientes piden solos — sin comisiones.
               </p>
             </div>
           </div>

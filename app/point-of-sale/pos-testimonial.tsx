@@ -60,9 +60,9 @@ export function PosTestimonial() {
 
           {/* Quote text */}
           <blockquote className="mb-8 text-xl leading-relaxed text-foreground md:text-2xl">
-            &ldquo;Antes cerraba la caja con calculadora y siempre faltaba plata. Ahora con woppi
-            <span className="font-semibold text-primary"> todo cuadra automáticamente</span>.
-            Me ahorro una hora diaria y ya no me estreso.&rdquo;
+            &ldquo;Es un sistema que ayuda mucho en los procesos y a llevar
+            <span className="font-semibold text-primary"> mayor control en ventas e inventario</span>,
+            tenemos tres semanas usando y ha sido de mucha ayuda.&rdquo;
           </blockquote>
 
           {/* Author */}
@@ -73,11 +73,11 @@ export function PosTestimonial() {
                 background: 'linear-gradient(135deg, hsl(39, 85%, 60%) 0%, hsl(39, 85%, 50%) 100%)'
               }}
             >
-              MR
+              CM
             </div>
             <div className="text-center sm:text-left">
-              <p className="font-semibold text-foreground">María Rodríguez</p>
-              <p className="text-sm text-muted-foreground">Dueña de Café Aroma, Caracas</p>
+              <p className="font-semibold text-foreground">Carlos Marín</p>
+              <p className="text-sm text-muted-foreground">Dueño de La Ensenada, Margarita</p>
             </div>
           </div>
         </motion.div>

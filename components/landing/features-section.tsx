@@ -153,7 +153,7 @@ export function FeaturesSection() {
             <span className="inline-block">✨</span>
           </h2>
           <p className="mx-auto max-w-xl text-white/70">
-            woppi tiene todo lo que necesitas para gestionar tu negocio. Todo en
+            WOPPI tiene todo lo que necesitas para gestionar tu negocio. Todo en
             un solo lugar.
           </p>
         </motion.div>

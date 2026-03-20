@@ -9,13 +9,13 @@ import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
 import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: 'Programa de Lealtad Digital — Sellos y Puntos | woppi',
+  title: 'Programa de Lealtad Digital — Sellos y Puntos | WOPPI',
   description:
     'Fideliza a tus clientes con sellos digitales y puntos canjeables. Sin tarjetas físicas que se pierden. Tu cliente acumula desde su celular y vuelve por sus recompensas.',
-  keywords: ['programa de lealtad', 'fidelización clientes', 'sellos digitales', 'puntos canjeables', 'tarjeta fidelidad digital', 'woppi lealtad'],
+  keywords: ['programa de lealtad', 'fidelización clientes', 'sellos digitales', 'puntos canjeables', 'tarjeta fidelidad digital', 'WOPPI lealtad'],
   alternates: { canonical: 'https://woppi.app/loyalty-program' },
   openGraph: {
-    title: 'Programa de Lealtad Digital — Sellos y Puntos | woppi',
+    title: 'Programa de Lealtad Digital — Sellos y Puntos | WOPPI',
     description: 'Sellos digitales, puntos y recompensas. Sin tarjetas físicas. Tus clientes siempre vuelven.',
     type: 'website',
   },
@@ -65,14 +65,14 @@ export default function ProgramaDeLealtadPage() {
             {/* Eyebrow */}
             <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-secondary/30 bg-secondary/10 px-4 py-1.5 text-sm font-medium text-secondary">
               <Heart className="size-3.5" />
-              Programa de Lealtad · woppi
+              Programa de Lealtad · WOPPI
             </div>
 
             {/* Headline */}
             <h1 className="mb-6 text-4xl font-extrabold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-6xl">
               Tus clientes vienen una vez.<br />
               <span className="text-secondary">
-                Con woppi, siempre vuelven.
+                Con WOPPI, siempre vuelven.
               </span>
             </h1>
 
@@ -103,7 +103,7 @@ export default function ProgramaDeLealtadPage() {
             <div className="relative -mb-1 mt-14">
               <Image
                 src="/screenshots/loyalty-hero.png"
-                alt="Programa de lealtad woppi — dashboard de sellos y puntos"
+                alt="Programa de lealtad WOPPI — dashboard de sellos y puntos"
                 width={1600}
                 height={900}
                 className="rounded-t-2xl border-t border-x border-white/10 shadow-2xl shadow-black/50"
@@ -178,7 +178,7 @@ export default function ProgramaDeLealtadPage() {
               }}
             >
               <p className="text-lg font-semibold text-white">
-                woppi convierte cada compra en un motivo para volver. Tú defines las reglas, el sistema hace el resto.
+                WOPPI convierte cada compra en un motivo para volver. Tú defines las reglas, el sistema hace el resto.
               </p>
             </div>
           </div>

@@ -12,6 +12,7 @@ import { FaqSection } from '@/components/landing/faq-section';
 import { LandingFooter } from '@/components/landing/landing-footer';
 import { SocialSection } from '@/components/landing/social-section';
 import { WhatsAppFloat } from '@/components/landing/whatsapp-float';
+import { PosTestimonial } from './point-of-sale/pos-testimonial';
 
 export const metadata: Metadata = {
   title: 'woppi - Punto de Venta + Tienda Online + Programa de Lealtad',
@@ -50,6 +51,7 @@ export default function LandingPage() {
         <FeatureCardsSection />
         <CtaSection />
         <FaqSection />
+        <PosTestimonial />
         <SocialSection />
       </main>
       <LandingFooter />

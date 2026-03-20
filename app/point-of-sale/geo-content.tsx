@@ -30,8 +30,8 @@ export function useGeoContent() {
         ? 'La tasa BCV se actualiza sola, todos los días'
         : 'Configura la moneda de tu país fácilmente',
       description: isVE
-        ? 'Cada mañana woppi descarga la tasa BCV oficial. Tus precios en USD se convierten automáticamente en cada cobro. Sin calculadoras, sin errores, sin discusiones con el cliente por el vuelto.'
-        : 'Configura tu moneda local y woppi se encarga del resto. Precios claros, cobros rápidos y sin errores de cálculo.',
+        ? 'Cada mañana WOPPI descarga la tasa BCV oficial. Tus precios en USD se convierten automáticamente en cada cobro. Sin calculadoras, sin errores, sin discusiones con el cliente por el vuelto.'
+        : 'Configura tu moneda local y WOPPI se encarga del resto. Precios claros, cobros rápidos y sin errores de cálculo.',
       bullets: isVE
         ? ['Precios en USD, cobro en VES o mixto', 'Vuelto calculado al centavo', 'Historial de tasas por fecha', 'Múltiples métodos de pago']
         : ['Configura tu moneda local', 'Cálculos automáticos sin errores', 'Historial de ventas completo', 'Múltiples métodos de pago'],

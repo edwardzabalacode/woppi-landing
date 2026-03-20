@@ -127,7 +127,7 @@ export function PuntoDeVentaProblems() {
           }}
         >
           <p className="text-lg font-semibold text-white">
-            woppi resuelve todo eso — y funciona desde el celular que ya tienes.
+            WOPPI resuelve todo eso — y funciona desde el celular que ya tienes.
           </p>
         </motion.div>
       </div>

@@ -146,10 +146,11 @@ export function BusinessTypesSection() {
               {/* Background image */}
               <Image
                 src={business.image}
-                alt={`woppi para ${business.name}`}
+                alt={`WOPPI para ${business.name}`}
                 fill
                 className="object-cover transition-transform duration-500 group-hover:scale-105"
                 sizes="(max-width: 768px) 240px, 280px"
+                priority={index < 2}
               />
 
               {/* Gradient overlay - with brand tint */}

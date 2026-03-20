@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
-const WHATSAPP_NUMBER = '584123949884';
+const WHATSAPP_NUMBER = '584120959630';
 const WHATSAPP_MESSAGE = encodeURIComponent(
-  'Hola! Me interesa woppi para mi negocio.'
+  'Hola! Me interesa WOPPI para mi negocio.'
 );
 const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`;
 

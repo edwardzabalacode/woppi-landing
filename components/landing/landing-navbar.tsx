@@ -60,10 +60,10 @@ function NavDropdown({
     <div className="group relative">
       <button
         className={cn(
-          'flex items-center gap-1.5 text-[15px] font-semibold transition-colors duration-300',
+          'flex items-center gap-1.5 font-semibold transition-all duration-300',
           scrolled
-            ? 'text-foreground/70 hover:text-foreground'
-            : 'text-white hover:text-white/80'
+            ? 'text-sm text-foreground/70 hover:text-foreground'
+            : 'text-[17px] text-white hover:text-white/80'
         )}
       >
         {label}
@@ -163,6 +163,7 @@ export function LandingNavbar() {
                     src="/logo-white.png"
                     alt="woppi"
                     fill
+                    sizes="100px"
                     className={cn(
                       'object-contain object-left transition-opacity duration-500',
                       scrolled ? 'opacity-0' : 'opacity-100'
@@ -174,6 +175,7 @@ export function LandingNavbar() {
                     src="/logo.png"
                     alt="woppi"
                     fill
+                    sizes="100px"
                     className={cn(
                       'object-contain object-left transition-opacity duration-500',
                       scrolled ? 'opacity-100' : 'opacity-0'
